@@ -6,7 +6,7 @@
   <div class="col-sm-3 well">
     <div class="well">
       <p><a href="#">My Profile</a></p>
-      {{\Auth::user()->name.",".\Auth::user()->apellido}}
+      {{\Auth::user()->name2.",".\Auth::user()->apellido}}
       <br>
       <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
     </div>
