@@ -10,6 +10,10 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+Route::post('users/{id}', 'UsersController@update');
+Route::resource('users', 'UsersController');
+Route::post('users/{id}/images', 'UsersController@images');
+
 
 Route::get('/', function () {
   if (Auth::guest()) {
@@ -20,6 +24,7 @@ Route::get('/', function () {
   }
 
 });
+Route::get('register','RegisterController@store');
 
 Auth::routes();
 

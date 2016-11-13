@@ -165,7 +165,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
         /*
          * Package Service Providers...
          */
