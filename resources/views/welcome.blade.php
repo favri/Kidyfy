@@ -52,7 +52,7 @@
                 <div class="form-group">
                     <div class="col-md-6 checkbox">
                       <label>
-                          <input type="checkbox" name="remember"> Remember Me
+                          <input type="checkbox" name="remember"> Recordarme
                       </label>
                       </div>
                       <div class="col-md-6 text-right">
@@ -65,7 +65,7 @@
                 <div class="form-group">
                     <div class="col-md-offset-2">
                         <a class="btn btn-link" href="{{ url('/password/reset') }}">
-                            Forgot Your Password?
+                            ¿Olvidaste tu contraseña?
                         </a>
                     </div>
                 </div>
