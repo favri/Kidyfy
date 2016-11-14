@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Image;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -63,12 +64,36 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-            'fecha_de_nacimiento'=>$data['fecha_de_nacimiento'],
-            'genero'=>$data['genero'],
-        ]);
+      $user = User::create([
+          'name' => $data['name'],
+          'email' => $data['email'],
+          'password' => bcrypt($data['password']),
+          'fecha_de_nacimiento'=>$data['fecha_de_nacimiento'],
+          'genero'=>$data['genero'],
+      ]);
+      $image= Image::create([
+          'scr' =>  uniqid(),
+          'user_id' => $user->id
+      ]);
+      $extension = strtolower(\Input::file('file')->getClientOriginalExtension());
+      $fileName = uniqid().'.'.$extension;
+      $file = $image->scr;
+      $ext = $file->extension();
+      $name = uniqid();
+      $file->storeAs('images/users-'.$user->id, $name.'.'.$ext);
+      //persiste en base
+      $image = new \App\Image(['src' => 'images/users-'.$user->id.'/'.$name.'.'.$ext]);
+      $user->images()->save($image);
+      $user->images($data['file'],$user->user_id);
+      return $user;
     }
+
+    public function store(Request $request)
+    {
+        $user = User::create($request->all());
+        $user->images($request->input('file'),$request->user_id);
+        dd($user->images($request->input('file'),$request->user_id));
+        return redirect('home');
+    }
+
 }

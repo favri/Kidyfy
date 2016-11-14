@@ -90,6 +90,11 @@
                         </div>
 
                         <div class="form-group">
+                          <label for="imagen" class="col-md-4 control-label">Imágen Perfil</label>
+                          <input name="file" type="file" size="2mb">
+                        </div>
+                        
+                        <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register
