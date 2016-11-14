@@ -75,7 +75,7 @@
                               </form>
                           </li>
                           <li>
-                              <a href="/users/{{Auth::user()->id }}"
+                              <a href="/register/{{Auth::user()->id }}/edit"
                                   onclick="event.preventDefault();
                                            document.getElementById('useredit-form').submit();">
                                   Mi Perfil

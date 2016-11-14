@@ -72,44 +72,38 @@ class RegisterController extends Controller
           'genero'=>$data['genero'],
       ]);
 
-
       $file = request()->file('file');
 
-      $extension = strtolower($file->getExtension());
+      $extension = strtolower($file->extension());
       $fileName = uniqid().'.'.$extension;
       $file->storeAs('images/users-'.$user->id, $fileName);
 
       $image= Image::create([
-          'scr' =>  'images/users-'.$user->id.'/'.$fileName,
+          'src' =>  'images/users-'.$user->id.'/'.$fileName,
           'user_id' => $user->id
       ]);
-
       // '/img/'.$user->image->src;
 
       return $user;
     }
 
-    public function edit(Request $request)
+    public function edit($id)
     {
-        $user = User::create($request->all());
-        $user->images($request->input('file'),$request->user_id);
-        dd($user->images($request->input('file'),$request->user_id));
-        return redirect('registeredit');
+        $user = User::find($id);
+        return view('auth.registeredit', compact('user'));
     }
 
     public function update(Request $request)
     {
-        $user = User::create($request->all());
-        $user->images($request->input('file'),$request->user_id);
-        dd($user->images($request->input('file'),$request->user_id));
+        $user = \Auth::user()->update($request->all());
+        $user->image($request->input('file'),$request->user_id);
         return redirect('registeredit');
     }
 
     public function store(Request $request)
     {
         $user = \Auth::user()->update($request->all());
-        $user->images($request->input('file'),$request->user_id);
-        dd($user->images($request->input('file'),$request->user_id));
+        $user->image($request->input('file'),$request->user_id);
         return redirect('home');
     }
 
