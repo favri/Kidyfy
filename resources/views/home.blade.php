@@ -11,7 +11,7 @@
       <p><a href="#">My Profile</a></p>
       {{\Auth::user()->name}}
       <br>
-      <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+      <img src="/img/{{\Auth::user()->image->src}}" class="img-circle" height="65" width="65" alt="Avatar">
     </div>
     <div class="well">
       <h4><a href="#">Grupos</a></h4>

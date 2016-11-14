@@ -10,9 +10,9 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-Route::post('users/{id}', 'UsersController@update');
-Route::resource('users', 'UsersController');
-Route::post('users/{id}/images', 'UsersController@images');
+// Route::post('users/{id}', 'UsersController@update');
+// Route::resource('users', 'UsersController');
+// Route::post('users/{id}/images', 'UsersController@images');
 
 
 Route::get('/', function () {
@@ -24,9 +24,10 @@ Route::get('/', function () {
   }
 
 });
-Route::get('register/{id}/edit','RegisterController@edit');
-Route::patch('register/{id}','RegisterController@update');
 
-Auth::routes();
+//Auth::routes();
+
+Route::get('register/{id}/edit','Auth\RegisterController@edit');
+Route::patch('register/{id}','Auth\RegisterController@update');
 
 Route::get('/home', 'HomeController@index');
