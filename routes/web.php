@@ -24,7 +24,8 @@ Route::get('/', function () {
   }
 
 });
-Route::get('register','RegisterController@store');
+Route::get('register/{id}/edit','RegisterController@edit');
+Route::patch('register/{id}','RegisterController@update');
 
 Auth::routes();
 

@@ -71,26 +71,43 @@ class RegisterController extends Controller
           'fecha_de_nacimiento'=>$data['fecha_de_nacimiento'],
           'genero'=>$data['genero'],
       ]);
+
+
+      $file = request()->file('file');
+
+      $extension = strtolower($file->getExtension());
+      $fileName = uniqid().'.'.$extension;
+      $file->storeAs('images/users-'.$user->id, $fileName);
+
       $image= Image::create([
-          'scr' =>  uniqid(),
+          'scr' =>  'images/users-'.$user->id.'/'.$fileName,
           'user_id' => $user->id
       ]);
-      $extension = strtolower(\Input::file('file')->getClientOriginalExtension());
-      $fileName = uniqid().'.'.$extension;
-      $file = $image->scr;
-      $ext = $file->extension();
-      $name = uniqid();
-      $file->storeAs('images/users-'.$user->id, $name.'.'.$ext);
-      //persiste en base
-      $image = new \App\Image(['src' => 'images/users-'.$user->id.'/'.$name.'.'.$ext]);
-      $user->images()->save($image);
-      $user->images($data['file'],$user->user_id);
+
+      // '/img/'.$user->image->src;
+
       return $user;
+    }
+
+    public function edit(Request $request)
+    {
+        $user = User::create($request->all());
+        $user->images($request->input('file'),$request->user_id);
+        dd($user->images($request->input('file'),$request->user_id));
+        return redirect('registeredit');
+    }
+
+    public function update(Request $request)
+    {
+        $user = User::create($request->all());
+        $user->images($request->input('file'),$request->user_id);
+        dd($user->images($request->input('file'),$request->user_id));
+        return redirect('registeredit');
     }
 
     public function store(Request $request)
     {
-        $user = User::create($request->all());
+        $user = \Auth::user()->update($request->all());
         $user->images($request->input('file'),$request->user_id);
         dd($user->images($request->input('file'),$request->user_id));
         return redirect('home');
