@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('titulo')
+  Inicio
+@endsection
 
 @section('content')
 <div class="container">
@@ -11,15 +14,16 @@
       <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
     </div>
     <div class="well">
-      <p><a href="#">Interests</a></p>
-      <p>
-        <span class="label label-default">News</span>
-        <span class="label label-primary">W3Schools</span>
-        <span class="label label-success">Labels</span>
-        <span class="label label-info">Football</span>
-        <span class="label label-warning">Gaming</span>
-        <span class="label label-danger">Friends</span>
-      </p>
+      <h4><a href="#">Grupos</a></h4>
+      <label for="establecimientos"><span class="icon"><i class="fa fa-hospital-o "></i></span></label><a href="#"> Establecimientos Medicos</a>
+      <br>
+      <label for="establecimientos"><span class="icon"><i class="fa fa-stethoscope"></i></span></label><a href="#"> Medicos</a>
+      <br>
+      <label for="establecimientos"><span class="icon"><i class="fa fa-briefcase"></i></span></label><a href="#"> Indumentaria</a>
+      <br>
+      <label for="establecimientos"><span class="icon"><i class="fa fa-graduation-cap"></i></span></label><a href="#"> Colegios</a>
+      <br>
+      <label for="establecimientos"><span class="icon"><i class="fa fa-life-ring "></i></span></label><a href="#"> Colonias</a>
     </div>
     <div class="alert alert-success fade in">
       <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
