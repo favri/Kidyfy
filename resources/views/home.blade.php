@@ -37,70 +37,41 @@
   <div class="col-sm-7">
 
     <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>{{\Auth::user()->nombre}} ¿Qué estas pensando? </p>
+        <div class="col-sm-10 col-sm-offset-1 commentbox">
+           <p>¿Qué estas pensando {{\Auth::user()->name}}?</p>
            <img src="Auth::user()->image()" class="img-circle" height="55" width="55" alt="Avatar">
-          </div>
+           <textarea name="userpost" cols="80" placeholder="¿Listo para Kidyfycarte?"> </textarea>
+           <input type="button" name="send" value="Enviar">
         </div>
-        <div class="col-sm-9">
-          <textarea name="userpost" rows="6" cols="75" placeholder="¿Listo para Kidyfycarte?"> </textarea>
-          <input type="button" name="send" value="Enviar">
-        </div>
-
     </div>
 
     <div class="row">
-      <div class="col-sm-3">
-        <div class="well">
-         <p>John</p>
-         <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+        <div class="col-sm-10 col-sm-offset-1 commentbox">
+           <p>Anja</p>
+           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
-      </div>
-      <div class="col-sm-9">
-        <div class="well">
-          <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
-      </div>
     </div>
     <div class="row">
-      <div class="col-sm-3">
-        <div class="well">
-         <p>Bo</p>
-         <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+        <div class="col-sm-10 col-sm-offset-1 commentbox">
+           <p>Anja</p>
+           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
-      </div>
-      <div class="col-sm-9">
-        <div class="well">
-          <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
-      </div>
     </div>
     <div class="row">
-      <div class="col-sm-3">
-        <div class="well">
-         <p>Jane</p>
-         <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+        <div class="col-sm-10 col-sm-offset-1 commentbox">
+           <p>Anja</p>
+           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
-      </div>
-      <div class="col-sm-9">
-        <div class="well">
-          <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
-      </div>
     </div>
     <div class="row">
-      <div class="col-sm-3">
-        <div class="well">
-         <p>Anja</p>
-         <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+        <div class="col-sm-10 col-sm-offset-1 commentbox">
+           <p>Anja</p>
+           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
-      </div>
-      <div class="col-sm-9">
-        <div class="well">
-          <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
-      </div>
     </div>
   </div>
   <div class="col-sm-2 well">
@@ -111,10 +82,10 @@
       <p>Fri. 27 November 2015</p>
       <button class="btn btn-primary">Info</button>
     </div>
-    <div class="well">
+    <div class="">
       <p>ADS</p>
     </div>
-    <div class="well">
+    <div class="">
       <p>ADS</p>
     </div>
   </div>

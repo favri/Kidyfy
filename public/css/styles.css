@@ -192,3 +192,11 @@ input[type=text], input[type=password], input[type=email]{
   background-color: #3666ff;
   border-color: white;
 }
+.commentbox{
+  border: solid 1px #3666ff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  }
