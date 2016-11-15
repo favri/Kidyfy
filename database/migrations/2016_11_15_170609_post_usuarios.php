@@ -18,6 +18,7 @@ class PostUsuarios extends Migration
          $table->integer('user_id')->unsigned();
         $table->foreign('user_id')->references('id')->on('users');
         $table->string('post_text');
+        $table->integer('append_postid');
         $table->ipAddress('visitor');
         $table->macAddress('device');
         $table->rememberToken();
