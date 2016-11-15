@@ -29,8 +29,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('registro/{id}/editar','RegisterController@editar');
-Route::get('register/{id}/edit','Auth\RegisterController@edit');
-Route::patch('register/{id}','Auth\RegisterController@update');
+// Route::get('register/{id}/edit','Auth\RegisterController@edit');
+// Route::patch('register/{id}','Auth\RegisterController@update');
 
 
 Route::get('/home', 'HomeController@index');

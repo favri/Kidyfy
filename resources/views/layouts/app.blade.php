@@ -75,13 +75,13 @@
                               </form>
                           </li>
                           <li>
-                              <a href="/register/{{Auth::user()->id }}/edit"
+                              <a href="/registro/{{Auth::user()->id }}/editar"
                                   onclick="event.preventDefault();
                                            document.getElementById('useredit-form').submit();">
                                   Mi Perfil
                               </a>
 
-                              <form id="useredit-form" action="/register/{{Auth::user()->id}}/edit" method="GET" style="display: none;">
+                              <form id="useredit-form" action="/registro/{{Auth::user()->id}}/editar" method="GET" style="display: none;">
                                   {{ csrf_field() }}
                               </form>
                           </li>
