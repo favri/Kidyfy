@@ -7,7 +7,7 @@
 <div class="container">
 <div class="row">
   <div class="col-sm-3 well">
-    <div class="well">
+    <div class="">
       <p><a href="#">My Perfil</a></p>
       {{\Auth::user()->name}}
       <br>
@@ -15,7 +15,10 @@
         <img src="/img/{{\Auth::user()->image->src}}" class="img-circle" height="65" width="65" alt="Avatar">
       @endif
     </div>
-    <div class="well">
+    <div class="">
+      <p>
+        -----
+      </p>
       <h4><a href="#">Grupos</a></h4>
       <label for="establecimientos"><span class="icon"><i class="fa fa-hospital-o "></i></span></label><a href="#"> Establecimientos Medicos</a>
       <br>
@@ -42,8 +45,12 @@
         <div class="col-sm-10 col-sm-offset-1 commentbox">
            <p>¿Qué estas pensando {{\Auth::user()->name}}?</p>
            <img src="Auth::user()->image()" class="img-circle" height="55" width="55" alt="Avatar">
-           <textarea name="userpost" cols="80" placeholder="¿Listo para Kidyfycarte?"> </textarea>
-           <input type="button" name="send" value="Enviar">
+           <form class="" action="index.html" method="post">
+             <textarea name="userpost" cols="80" rows="5" placeholder="¿Listo para Kidyfycarte?"> </textarea>
+             <input type="file" name="postfile" size="2mb" value="" style="display:inline-block">
+             <input type="button" name="send" value="Enviar">
+           </form>
+
         </div>
     </div>
 

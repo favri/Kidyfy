@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="/register/{{\Auth::user()->id}}" enctype="multipart/form-data">
+                    <form class="form-horizontal" role="form" method="POST" action="/registro/{{\Auth::user()->id}}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         {{ method_field('patch') }}
 

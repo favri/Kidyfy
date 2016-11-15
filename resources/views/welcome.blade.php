@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('titulo')
+  Inicia sesión o regístrate
+@endsection
 
 @section('content')
   <div class="container">
@@ -13,7 +16,7 @@
   <div class="col-sm-3 col-sm-offset-1">
 
     <div class="panel panel-default">
-        <div class="panel-heading">Ingresar</div>
+        <div class="panel-heading">INGRESAR</div>
         <div class="panel-body">
             {{-- Empieza Form --}}
             <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
