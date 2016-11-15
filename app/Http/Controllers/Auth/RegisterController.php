@@ -7,6 +7,7 @@ use App\Image;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -87,12 +88,6 @@ class RegisterController extends Controller
       return $user;
     }
 
-    public function edit($id)
-    {
-        $user = User::find($id);
-        return view('auth.registeredit', compact('user'));
-    }
-
     public function update(Request $request)
     {
         $user = User::find($request->id);
@@ -117,7 +112,7 @@ class RegisterController extends Controller
         $user = \Auth::user()->update($request->all());
         // Guardar avatar nuevo
         $user->image($request->input('file'),$request->user_id);
-        return redirect('registeredit');
+        return redirect('auth.registeredit');
     }
 
     public function store(Request $request)

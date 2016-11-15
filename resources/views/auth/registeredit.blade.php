@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}" enctype="multipart/form-data">
+                    <form class="form-horizontal" role="form" method="POST" action="/register/{{\Auth::user()->id}}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         {{ method_field('patch') }}
 
@@ -92,7 +92,7 @@
 
                         <div class="form-group">
                           <label for="imagen" class="col-md-4 control-label">Imágen Perfil</label>
-                          @if (\Auth::user()->image->src)
+                          @if (is_object(\Auth::user()->image))
                             <img src="/img/{{\Auth::user()->image->src}}" class="img-circle" height="65" width="65" alt="Avatar">
                           @endif
 

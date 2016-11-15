@@ -71,7 +71,7 @@
 
                               <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                   {{ csrf_field() }}
-                                  {{ method_field('post') }}
+                                  {{-- {{ method_field('post') }} --}}
                               </form>
                           </li>
                           <li>
@@ -81,9 +81,8 @@
                                   Mi Perfil
                               </a>
 
-                              <form id="useredit-form" action="/users/{{Auth::user()->id}}" method="POST" style="display: none;">
+                              <form id="useredit-form" action="/register/{{Auth::user()->id}}/edit" method="GET" style="display: none;">
                                   {{ csrf_field() }}
-                                  {{ method_field('patch') }}
                               </form>
                           </li>
                       </ul>
