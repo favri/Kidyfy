@@ -11,7 +11,9 @@
       <p><a href="#">My Perfil</a></p>
       {{\Auth::user()->name}}
       <br>
-      <img src="/img/{{\Auth::user()->image->src}}" class="img-circle" height="65" width="65" alt="Avatar">
+      <!-- @if (\Auth::user()->image->src != "null") -->
+        <img src="/img/{{\Auth::user()->image->src}}" class="img-circle" height="65" width="65" alt="Avatar">
+      <!-- @endif -->
     </div>
     <div class="well">
       <h4><a href="#">Grupos</a></h4>

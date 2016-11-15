@@ -95,7 +95,27 @@ class RegisterController extends Controller
 
     public function update(Request $request)
     {
+        $user = User::find($request->id);
+
+        if ($request->file) {
+          // Borrar avatar
+          \Storage::delete($user->image->src);
+          //borrar las filas imagen
+          $user->image->delete();
+
+          $file = request()->file('file');
+          $extension = strtolower($file->extension());
+          $fileName = uniqid().'.'.$extension;
+          $file->storeAs('images/users-'.$user->id, $fileName);
+
+          // $image= Image::create([
+          //     'src' =>  'images/users-'.$user->id.'/'.$fileName,
+          //     'user_id' => $user->id
+          // ]);
+        }
+
         $user = \Auth::user()->update($request->all());
+        // Guardar avatar nuevo
         $user->image($request->input('file'),$request->user_id);
         return redirect('registeredit');
     }

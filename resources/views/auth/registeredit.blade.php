@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         {{ method_field('patch') }}
 
@@ -92,6 +92,10 @@
 
                         <div class="form-group">
                           <label for="imagen" class="col-md-4 control-label">Imágen Perfil</label>
+                          @if (\Auth::user()->image->src)
+                            <img src="/img/{{\Auth::user()->image->src}}" class="img-circle" height="65" width="65" alt="Avatar">
+                          @endif
+
                           <input name="file" type="file" size="2mb">
                         </div>
 
