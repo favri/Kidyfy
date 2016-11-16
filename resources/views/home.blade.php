@@ -102,3 +102,4 @@
 </div>
 <!-- Finish MainContainer -->
 @endsection
+@extends('partials.footerkdf')

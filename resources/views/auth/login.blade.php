@@ -66,3 +66,4 @@
     </div>
 </div>
 @endsection
+@extends('partials.footerkdf')
