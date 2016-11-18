@@ -19,7 +19,7 @@
       <p>
         -----
       </p>
-      <h4><a href="#">Grupos</a></h4>
+      <h4><a href="{{ url('home/grupo')}}">Grupos</a></h4>
       <label for="establecimientos"><span class="icon"><i class="fa fa-hospital-o "></i></span></label><a href="#"> Establecimientos Medicos</a>
       <br>
       <label for="establecimientos"><span class="icon"><i class="fa fa-stethoscope"></i></span></label><a href="#"> Medicos</a>
