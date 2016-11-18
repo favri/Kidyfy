@@ -35,3 +35,5 @@ Route::match(['post', 'patch'],'registro/{id}','RegisterController@actualizar');
 
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('faq', 'FaqController@faqs');
