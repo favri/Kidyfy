@@ -96,7 +96,7 @@
                             <img src="/img/{{\Auth::user()->image->src}}" class="img-circle" height="65" width="65" alt="Avatar">
                           @endif
 
-                          <input name="file" type="file" size="2mb">
+                          <input name="file" type="file" size="2mb" style="display:inline-block">
                         </div>
 
                         <div class="form-group">

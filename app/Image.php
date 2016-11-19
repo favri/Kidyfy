@@ -9,6 +9,7 @@ class Image extends Model
   protected $fillable = [
       'src','user_id'
   ];
+  
   public function user() {
     return $this->belogsTo('\App\User');
   }
