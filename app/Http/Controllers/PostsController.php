@@ -20,4 +20,10 @@ class PostsController extends Controller
 
         return view('home');
     }
+
+
+    public function AllPosts(Auth $user, Post $post){
+        $posts = $post->where("user_id", "=", $user->id)->get();
+        return view('home' , compact('posts'));
+}
 }
