@@ -28,6 +28,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/home','PostsController@store');
+
 Route::get('registro/{id}/editar','RegisterController@editar');
 Route::match(['post', 'patch'],'registro/{id}','RegisterController@actualizar');
 // Route::get('register/{id}/edit','Auth\RegisterController@edit');

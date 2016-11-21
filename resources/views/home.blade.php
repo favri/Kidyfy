@@ -44,11 +44,12 @@
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1 commentbox">
            <p>¿Qué estas pensando {{\Auth::user()->name}}?</p>
-           <img src="Auth::user()->image()" class="img-circle" height="55" width="55" alt="Avatar">
-           <form class="" action="index.html" method="post">
-             <textarea name="userpost" cols="80" rows="5" placeholder="¿Listo para Kidyfycarte?"> </textarea>
+           <img src="/img/{{\Auth::user()->image->src}}" class="img-circle" height="55" width="55" alt="Avatar">
+           <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
+             {{ csrf_field() }}
+             <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyfycarte?"> </textarea>
              <input type="file" name="postfile" size="2mb" value="" style="display:inline-block">
-             <input type="button" name="send" value="Enviar">
+             <button type="submit" class="btn btn-primary">Postear</button>
            </form>
 
         </div>

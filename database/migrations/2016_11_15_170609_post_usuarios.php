@@ -20,7 +20,6 @@ class PostUsuarios extends Migration
         $table->string('post_text');
         $table->integer('append_postid');
         $table->ipAddress('visitor');
-        $table->macAddress('device');
         $table->rememberToken();
         $table->timestamps();
       });
