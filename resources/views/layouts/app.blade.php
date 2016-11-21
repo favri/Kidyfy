@@ -23,9 +23,9 @@
         ]); ?>
     </script>
 </head>
-<body>
+<body class="bkg-grey">
   <div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top bkg-white shw-nav" >
       <div class="container">
         <div class="navbar-header">
 
