@@ -18,10 +18,12 @@
 
     <!-- Scripts -->
     <script>
-        window.Laravel = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
-        ]); ?>
+        window.laravel = @php echo json_encode([
+                'csrfToken' => csrf_token(),
+            ]);
+            @endphp
     </script>
+
 </head>
 <body class="bkg-grey">
   <div id="app">
@@ -92,13 +94,13 @@
         </div>
       </div>
     </nav>
-
-    @yield('content')
+  @yield('content')
   </div>
 
   <!-- Scripts -->
   <script src="/js/app.js"></script>
   <script src="js/controlesjs.js"></script>
   <script src="js/faq.js"></script>
+  {{-- <script src="js/chat.js"></script> --}}
 </body>
 </html>

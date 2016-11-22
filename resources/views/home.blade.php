@@ -98,6 +98,7 @@
     <div class="">
       <p>ADS</p>
     </div>
+    <div id="content"></div>
   </div>
 </div>
 </div>
