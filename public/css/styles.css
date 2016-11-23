@@ -72,6 +72,10 @@
   padding-right: 40px;
 }
 
+.pdtop20{
+  padding-top: 20px;
+}
+
 .pd10{
   padding: 10px;
 }
@@ -256,7 +260,7 @@ input[type=text], input[type=password], input[type=email]{
   border-color: white;
 }
 .commentbox{
-  border: solid 1px #3666ff;
+  /*border: solid 1px #3666ff;*/
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;

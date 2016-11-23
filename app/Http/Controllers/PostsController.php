@@ -27,13 +27,11 @@ class PostsController extends Controller
 
     public function AllPosts(Auth $user, Post $post){
         $posts = $post->where("user_id", "=", $user->id)->get();
-        dd($post);
         return view('home' , compact('posts'));
   }
 
       public function show($id){
         $posts = \App\Post::find($id);
-        dd($posts);
-        return view('home', compact('posts'));
+      return view('home', compact('posts'));
       }
 }

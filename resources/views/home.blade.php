@@ -6,8 +6,8 @@
 @section('content')
 <div class="container">
 <div class="row">
-  <div class="col-sm-3 well">
-    <div class="">
+  <div class="col-sm-3 bkg-white brd-top">
+    <div class="pdtop20">
       <p><a href="#">My Perfil</a></p>
       {{\Auth::user()->name}}
       <br>
@@ -41,10 +41,10 @@
   </div>
   <div class="col-sm-7">
 
-    <div class="row shw-nav">
-        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-blue">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 commentbox brd-top">
           <p>¿Qué estas pensando {{\Auth::user()->name}}?</p>
-           <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="55" width="55" alt="Avatar">
+           <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
 
            <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
              {{ csrf_field() }}
@@ -56,12 +56,16 @@
         </div>
     </div>
 
-    <div class="row shw-nav">
+    <div class="row">
       @foreach ($posts as $post)
-        <div class="col-sm-10 col-sm-offset-1 commentbox">
-            <p>Creado por: {{ $post->user->name }}</p>
-            <p><img src="{{ $post->user->image }}" class="img-circle" height="55" width="55" alt="Avatar">{{ $post->post_text }}</p>
-            <p>El {{$post->created_at}}</p>
+        <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
+            <p class="font-size-14">
+              <img src="img/{{$post->user->image->src}}" class="img-square" height="30" width="30" alt="Avatar">
+              {{ $post->user->name }}
+              El {{$post->created_at}}
+            </p>
+            <p>{{ $post->post_text }}</p>
+            <p></p>
         </div>
       @endforeach
         <div class="col-sm-10 col-sm-offset-1 commentbox post-color-green">
@@ -70,21 +74,21 @@
            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
     </div>
-    <div class="row shw-nav">
+    <div class="row">
         <div class="col-sm-10 col-sm-offset-1 commentbox post-color-pink">
            <p>Anja</p>
            <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
     </div>
-    <div class="row shw-nav">
+    <div class="row">
         <div class="col-sm-10 col-sm-offset-1 commentbox post-color-yellow">
            <p>Anja</p>
            <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
     </div>
-    <div class="row shw-nav">
+    <div class="row">
         <div class="col-sm-10 col-sm-offset-1 commentbox post-color-purple">
            <p>Anja</p>
            <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
@@ -92,10 +96,10 @@
         </div>
     </div>
   </div>
-  <div class="col-sm-2 well">
-    <div class="thumbnail">
+  <div class="col-sm-2 bkg-white brd-top">
+    <div class="pdtop20">
       <p>Upcoming Events:</p>
-      <img src="paris.jpg" alt="Paris" width="400" height="300">
+      <img src="paris.jpg" alt="Paris">
       <p><strong>Paris</strong></p>
       <p>Fri. 27 November 2015</p>
       <button class="btn btn-primary">Info</button>
