@@ -15,11 +15,9 @@ class PostUsuarios extends Migration
     {
       Schema::create('posts', function (Blueprint $table) {
         $table->increments('id');
-         $table->integer('user_id')->unsigned();
+        $table->integer('user_id')->unsigned();
         $table->foreign('user_id')->references('id')->on('users');
         $table->string('post_text');
-        $table->integer('append_postid');
-        $table->ipAddress('visitor');
         $table->rememberToken();
         $table->timestamps();
       });
