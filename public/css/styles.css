@@ -13,6 +13,9 @@
   padding-bottom: 80px;
   color: #3666ff;
 }
+.font-size-14{
+  font-size: 14px;
+}
 
 .bkg-transparente{
   background-color: white;
@@ -29,10 +32,19 @@
   background-color: #F8F8F8;
 }
 .post-color-blue{
-
+  background-color: rgba( 208, 236, 231, 1 );
+}
+.post-color-green{
+  background-color: rgba( 213, 245, 227, 1 );
+}
+.post-color-pink{
+  background-color: rgba( 250, 219, 216 , 1 );
 }
 .post-color-yellow{
-
+  background-color: rgba( 252, 243, 207, 1 );
+}
+.post-color-purple{
+  background-color: rgba( 235, 222, 240, 1);
 }
 
 .font-white a{
@@ -44,6 +56,9 @@
 }
 .brd-top{
   border-top:2px solid rgba(54, 102, 255, 0.1)
+}
+.margin-btn-10{
+  margin-bottom: 10px;
 }
 
 .dropdown-menu > li > a:hover{

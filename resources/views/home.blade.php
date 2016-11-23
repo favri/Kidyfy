@@ -12,7 +12,7 @@
       {{\Auth::user()->name}}
       <br>
       @if (is_object(\Auth::user()->image))
-        <img src="/img/{{\Auth::user()->image->src}}" class="img-circle" height="65" width="65" alt="Avatar">
+        <img src="/img/{{\Auth::user()->image->src}}" class="img-square" height="65" width="65" alt="Avatar">
       @endif
     </div>
     <div class="">
@@ -41,10 +41,11 @@
   </div>
   <div class="col-sm-7">
 
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox">
-           <p>¿Qué estas pensando {{\Auth::user()->name}}?</p>
-           <img src="/img/{{\Auth::user()->image->src}}" class="img-circle" height="55" width="55" alt="Avatar">
+    <div class="row shw-nav">
+        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-blue">
+          <p>¿Qué estas pensando {{\Auth::user()->name}}?</p>
+           <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="55" width="55" alt="Avatar">
+
            <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
              {{ csrf_field() }}
              <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyfycarte?"> </textarea>
@@ -55,31 +56,31 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox">
+    <div class="row shw-nav">
+        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-green">
            <p>Anja</p>
-           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox">
+    <div class="row shw-nav">
+        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-pink">
            <p>Anja</p>
-           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox">
+    <div class="row shw-nav">
+        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-yellow">
            <p>Anja</p>
-           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox">
+    <div class="row shw-nav">
+        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-purple">
            <p>Anja</p>
-           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
         </div>
     </div>

@@ -16,7 +16,7 @@
   <div class="col-sm-3 col-sm-offset-1">
 
     <div class="panel panel-default">
-        <div class="panel-heading">INGRESAR</div>
+        <div class="panel-heading font-size-14">INGRESAR</div>
         <div class="panel-body">
             {{-- Empieza Form --}}
             <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
