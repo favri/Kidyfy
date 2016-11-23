@@ -57,6 +57,13 @@
     </div>
 
     <div class="row shw-nav">
+      @foreach ($posts as $post)
+        <div class="col-sm-10 col-sm-offset-1 commentbox">
+            <p>Creado por: {{ $post->user->name }}</p>
+            <p><img src="{{ $post->user->image }}" class="img-circle" height="55" width="55" alt="Avatar">{{ $post->post_text }}</p>
+            <p>El {{$post->created_at}}</p>
+        </div>
+      @endforeach
         <div class="col-sm-10 col-sm-offset-1 commentbox post-color-green">
            <p>Anja</p>
            <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
