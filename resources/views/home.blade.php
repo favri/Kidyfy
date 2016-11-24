@@ -8,8 +8,8 @@
 <div class="row">
   <div class="col-sm-3 bkg-white brd-top">
     <div class="pdtop20">
-      <p><a href="#">My Perfil</a></p>
-      {{\Auth::user()->name}}
+      <p><a href="/registro/{{Auth::user()->id }}/editar">{{\Auth::user()->name}}</a></p>
+
       <br>
       @if (is_object(\Auth::user()->image))
         <img src="/img/{{\Auth::user()->image->src}}" class="img-square" height="65" width="65" alt="Avatar">
@@ -42,7 +42,7 @@
   <div class="col-sm-7">
 
     <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox brd-top">
+        <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white brd-top">
           <p>¿Qué estas pensando {{\Auth::user()->name}}?</p>
            <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
 
