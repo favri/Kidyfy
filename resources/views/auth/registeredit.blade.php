@@ -1,11 +1,14 @@
 @extends('layouts.app')
 
+@section('titulo')
+  Editar Perfil
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading font-size-14">Editar Perfil</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="/registro/{{\Auth::user()->id}}" enctype="multipart/form-data">
                         {{ csrf_field() }}
@@ -85,11 +88,11 @@
                           <input name="file" type="file" size="2mb" style="display:inline-block">
                           </label>
                         </div>
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        {{-- <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Contraseña</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                              <input id="password" type="password" class="form-control" name="password" placeholder="contraseña" required>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -97,7 +100,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
