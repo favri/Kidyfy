@@ -65,6 +65,17 @@
 
                       <ul class="dropdown-menu" role="menu">
                           <li>
+                              <a href="/registro/{{Auth::user()->id }}/editar"
+                                  onclick="event.preventDefault();
+                                           document.getElementById('useredit-form').submit();">
+                                  Editar Perfil
+                              </a>
+
+                              <form id="useredit-form" action="/registro/{{Auth::user()->id}}/editar" method="GET" style="display: none;">
+                                  {{ csrf_field() }}
+                              </form>
+                          </li>
+                          <li>
                               <a href="{{ url('/logout') }}"
                                   onclick="event.preventDefault();
                                            document.getElementById('logout-form').submit();">
@@ -74,17 +85,6 @@
                               <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                   {{ csrf_field() }}
                                   {{-- {{ method_field('post') }} --}}
-                              </form>
-                          </li>
-                          <li>
-                              <a href="/registro/{{Auth::user()->id }}/editar"
-                                  onclick="event.preventDefault();
-                                           document.getElementById('useredit-form').submit();">
-                                  Mi Perfil
-                              </a>
-
-                              <form id="useredit-form" action="/registro/{{Auth::user()->id}}/editar" method="GET" style="display: none;">
-                                  {{ csrf_field() }}
                               </form>
                           </li>
                       </ul>

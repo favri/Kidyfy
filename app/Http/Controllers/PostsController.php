@@ -31,7 +31,7 @@ class PostsController extends Controller
   }
 
       public function show($id){
-        $posts = \App\Post::find($id);
+      $posts = Post::find($id);
       return view('home', compact('posts'));
       }
 }

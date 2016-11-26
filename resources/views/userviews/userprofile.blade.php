@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('titulo')
-  Inicio
+  Mi Perfil - {{Auth::user()->name }}
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@
       @endif
     </div>
     <div class="mgtop20 ">
-        <h4><a href="grupo/{{Auth::user()->id }}">Grupos</a></h4>
+        <h4><a href="{{ url('home/grupo')}}">Grupos</a></h4>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
             <span class="icon"><i class="fa fa-hospital-o "></i></span>
@@ -66,21 +66,11 @@
   <div class="col-sm-7">
 
     <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white brd-top">
-          <p>¿Qué estas pensando {{\Auth::user()->name}}?</p>
-           <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
-
-           <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
-             {{ csrf_field() }}
-             <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyfycarte?"> </textarea>
-             <input type="file" name="postfile" size="2mb" value="" style="display:inline-block">
-             <button type="submit" class="btn btn-primary">Postear</button>
-           </form>
-
-        </div>
-    </div>
-
-    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
+        <p>
+          VISTA DE USUARIO A TRABAJAR!
+        </p>
+      </div>
       @foreach ($posts as $post)
         <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
           <div class="row">
@@ -90,7 +80,7 @@
               </p>
             </div>
             <div class="col-sm-10">
-              <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
+              <p class="font-size-large"><img src="/img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
             </div>
           </div>
 
