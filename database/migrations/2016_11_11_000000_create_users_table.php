@@ -28,7 +28,6 @@ class CreateUsersTable extends Migration
         $table->increments('id');
         $table->string('src');
         $table->timestamps();
-
         $table->integer('user_id')->unsigned();
       });
 

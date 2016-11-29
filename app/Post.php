@@ -5,11 +5,12 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Image;
+use App\Group;
 
 class Post extends Model
 {
   protected $fillable = [
-      'post_text','user_id',
+      'post_text','user_id','group_id',
   ];
 
   protected $hidden = [
@@ -19,6 +20,11 @@ class Post extends Model
   public function user()
   {
     return $this->belongsTo('App\User' , 'user_id') ;
+  }
+
+  public function group()
+  {
+    return $this->belongsTo('App\Group','group_id') ;
   }
 
 }

@@ -8,7 +8,7 @@
 <div class="row">
   <div class="col-sm-3 bkg-white brd-top">
     <div class="pdtop20">
-      <p><a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a></p>
+      <p class="font-size-large"><a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a></p>
       <br>
       @if (is_object(\Auth::user()->image))
         <img src="/img/{{\Auth::user()->image->src}}" class="img-square" height="65" width="65" alt="Avatar">
@@ -21,7 +21,7 @@
             <span class="icon"><i class="fa fa-hospital-o "></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="establecimientos"><a href="#"> Establecimientos Medicos</a></label>
+            <label for="establecimientos"><a href="establecimientos/{{Auth::user()->id }}"> Establecimientos Medicos</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -29,7 +29,7 @@
             <span class="icon"><i class="fa fa-stethoscope"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="medicos"><a href="#"> Medicos</a></label>
+            <label for="medicos"><a href="medicos/{{Auth::user()->id }}"> Medicos</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -37,7 +37,7 @@
             <span class="icon"><i class="fa fa-briefcase"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="indumentaria"><a href="#"> Indumentaria</a></label>
+            <label for="indumentaria"><a href="indumentaria/{{Auth::user()->id }}"> Indumentaria</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -45,15 +45,15 @@
             <span class="icon"><i class="fa fa-graduation-cap"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="Colegios"><a href="#"> Colegios</a></label>
+            <label for="Colegios"><a href="colegios/{{Auth::user()->id }}"> Colegios</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
-            <span class="icon"><i class="fa fa-life-ring "></i></span>
+            <span class="icon"><i class="fa fa-life-ring"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="colonias"><a href="#"> Colonias</a></label>
+            <label for="colonias"><a href="colonias/{{Auth::user()->id }}"> Colonias</a></label>
           </div>
         </div>
     </div>
@@ -67,13 +67,14 @@
 
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white brd-top">
-          <p>¿Qué estas pensando {{\Auth::user()->name}}?</p>
+          <p class="font-size-medium">¿Listo para Kidyar {{\Auth::user()->name}}?</p>
            <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
 
            <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
              {{ csrf_field() }}
-             <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyfycarte?"> </textarea>
+             <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyarte?"> </textarea>
              <input type="file" name="postfile" size="2mb" value="" style="display:inline-block">
+             <input type="number" name="group_id" value="1" hidden>
              <button type="submit" class="btn btn-primary">Postear</button>
            </form>
 
@@ -82,7 +83,7 @@
 
     <div class="row">
       @foreach ($posts as $post)
-        <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
+        <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white" style="border-right:10px solid #{{$post->group->color}}">
           <div class="row">
             <div class="col-sm-12">
               <p class="font-size-medium">
@@ -97,33 +98,8 @@
 
         </div>
       @endforeach
-        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-green">
-           <p>Anja</p>
-           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
-           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
     </div>
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-pink">
-           <p>Anja</p>
-           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
-           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-yellow">
-           <p>Anja</p>
-           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
-           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-purple">
-           <p>Anja</p>
-           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
-           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
-    </div>
+
   </div>
   <div class="col-sm-2 bkg-white brd-top">
     <div class="pdtop20">

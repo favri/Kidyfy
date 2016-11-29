@@ -43,3 +43,13 @@ Route::get('/home/{id}' , 'HomeController@view');
 Route::get('faq', 'FaqController@faqs');
 
 Route::get('/grupo/{id}', 'GrupoController@view');
+
+Route::get('medicos/{id}', 'MedicosController@view');
+
+Route::get('establecimientos/{id}', 'EstablecimientosController@view');
+
+Route::get('indumentaria/{id}', 'IndumentariaController@view');
+
+Route::get('colegios/{id}', 'ColegiosController@view');
+
+Route::get('colonias/{id}', 'ColoniasController@view');

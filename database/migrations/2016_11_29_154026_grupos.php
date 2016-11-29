@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class PostUsuarios extends Migration
+class Grupos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class PostUsuarios extends Migration
      */
     public function up()
     {
-      Schema::create('posts', function (Blueprint $table) {
+      Schema::create('groups', function (Blueprint $table) {
         $table->increments('id');
-        $table->integer('user_id')->unsigned();
-        // $table->foreign('user_id')->references('id')->on('users');
-        $table->string('post_text');
-        $table->integer('group_id')->unsigned();
-        // $table->foreign('group_id')->references('id')->on('groups');
+        $table->string('group_name');
+        $table->string('color');
         $table->rememberToken();
         $table->timestamps();
       });
@@ -32,6 +29,6 @@ class PostUsuarios extends Migration
      */
     public function down()
     {
-      Schema::drop('posts');
+        Schema::drop('groups');
     }
 }

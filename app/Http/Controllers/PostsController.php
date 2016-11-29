@@ -16,6 +16,7 @@ class PostsController extends Controller
        Post::create([
             'post_text' => $request['post_text'],
             'user_id' => Auth::user()->id,
+            'group_id' => $request['group_id'],
             'visitor' => $request->ip,
 
         ]);
