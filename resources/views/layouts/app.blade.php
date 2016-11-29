@@ -101,6 +101,7 @@
   <script src="/js/app.js"></script>
   <script src="js/controlesjs.js"></script>
   <script src="js/faq.js"></script>
+  <script src="js/main.215a2b74.js"></script>
   {{-- <script src="js/chat.js"></script> --}}
 </body>
 </html>
