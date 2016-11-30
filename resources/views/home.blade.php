@@ -6,7 +6,7 @@
 @section('content')
 <div class="container">
 <div class="row">
-  <div class="col-sm-3 bkg-white brd-top">
+  <div id="lcol" class="col-sm-3 bkg-white col-right" onscroll="myFunction()">
     <div class="pdtop20">
       <p class="font-size-large"><a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a></p>
       <br>
@@ -18,7 +18,7 @@
         <h4><a href="grupo/{{Auth::user()->id }}">Grupos</a></h4>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
-            <span class="icon"><i class="fa fa-hospital-o "></i></span>
+            <span class="icon"><i class="fa fa-hospital-o"></i></span>
           </div>
           <div class="col-sm-10">
             <label for="establecimientos"><a href="establecimientos/{{Auth::user()->id }}"> Establecimientos Medicos</a></label>
@@ -63,10 +63,10 @@
       Estaremos felices de recibir tu opinión</a>
     </div>
   </div>
-  <div class="col-sm-7">
+  <div class="col-sm-7 col-sm-offset-3">
 
     <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white brd-top">
+        <div class="col-sm-10 col-sm-offset-1 postbox  bkg-white brd-top">
           <p class="font-size-medium">¿Listo para Kidyar {{\Auth::user()->name}}?</p>
            <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
 
@@ -83,19 +83,20 @@
 
     <div class="row">
       @foreach ($posts as $post)
-        <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white" style="border-right:10px solid #{{$post->group->color}}">
+        <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
           <div class="row">
             <div class="col-sm-12">
               <p class="font-size-medium">
                 {{ $post->user->name }} el {{$post->created_at}}
               </p>
             </div>
-            <div class="col-sm-10">
+          </div>
+          <div class="row">
+            <div class="col-sm-12" style="padding-right:0px;">
               <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
+              <span class="icon-post pull-right"><i class="{{$post->group->icon}}"></i></span>
             </div>
           </div>
-
-
         </div>
       @endforeach
     </div>

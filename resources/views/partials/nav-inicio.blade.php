@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light bkg-transparente">
+<nav class="navbar navbar-light bkg-white">
   <div class="container-fluid col-xs-offset-3 col-sm-offset-0">
     <a href="{{ url('inicio')}}" class="navbar-left"><img src="img/logo-mashup.png" height="60"></a>
     <div class="logout">

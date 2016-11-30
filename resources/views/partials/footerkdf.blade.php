@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-bottom bkg-transparente text-right brd-top">
+<nav class="navbar navbar-fixed-bottom bkg-white text-right brd-top">
     <div class="container-fluid">
       <a class="nav-item nav-link" href="{{ url('faq')}}">FAQ</a>
       <a class="nav-item nav-link" href="#">Contacto</a>

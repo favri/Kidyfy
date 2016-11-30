@@ -17,6 +17,7 @@ class Grupos extends Migration
         $table->increments('id');
         $table->string('group_name');
         $table->string('color');
+        $table->string('icon');
         $table->rememberToken();
         $table->timestamps();
       });

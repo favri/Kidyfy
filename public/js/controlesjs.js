@@ -107,6 +107,15 @@ function redireccionar() {
   window.location.href=pagina;
 }
 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+        document.getElementById("lcol").className = "col-sm-3 bkg-white col-right brd-top fixed-top";
+    } else {
+        document.getElementById("lcol").className = "col-sm-3 bkg-white col-right brd-top";
+    }
+}
 
 window.onload = function(){
   // Captura Formulario Registro
