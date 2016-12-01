@@ -17,7 +17,7 @@ class MedicosController extends Controller
   public function view($id)
   {
       $user = User::find($id);
-      $posts = Post::orderBy('created_at', 'desc')->get();
+      $posts = Post::where('group_id', '2')->orderBy('created_at', 'desc')->get();
       return view('groupviews.medicos', compact('user','posts'));
   }
 }
