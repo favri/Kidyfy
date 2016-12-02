@@ -12,7 +12,7 @@ class EstablecimientosController extends Controller
   public function view($id)
   {
       $user = User::find($id);
-      $posts = Post::orderBy('created_at', 'desc')->get();
+      $posts = Post::where('group_id', '3')->orderBy('created_at', 'desc')->get();
       return view('groupviews.establecimientos', compact('user','posts'));
   }
 }

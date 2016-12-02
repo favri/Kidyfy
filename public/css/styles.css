@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Rubik:300i,400,700';
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
 
 *{ box-sizing: border-box;
 }
@@ -7,7 +7,7 @@
     margin: 0 auto;
 }
  body{
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 10px;
 
   padding-bottom: 80px;
@@ -100,6 +100,12 @@
 .mgtop10{
   margin-top: 10px;
 }
+.mgtop5{
+  margin-top: 5px;
+}
+.mgtop4{
+  margin-top: 4px;
+}
 .navbar-brand{
   padding: 5px 5px;
 }
@@ -171,11 +177,17 @@
 
 .col-right{
   position: fixed;
-  z-index: 100;
+  z-index: 1;
+  width: 22%;
+}
+.nav-fixed{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 .fixed-top{
-  top: 10;
+  top: 90px;
 }
 
 #form-registro{
@@ -300,10 +312,57 @@ textarea{
   height: 100px;
 }
 
+.ul-react-events li{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.group-box{
+  background-color: rgba(251, 247, 247,0.9);
+  margin: 115px -20px -20px;
+  padding: 10px 15px;
+}
+.group-box h3{
+  margin-top: 0;
+}
 .img-medicos{
   background-image: url(/img/grupos/medicos.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
+  min-height: 220px;
+}
+.img-establecimientos{
+  background-image: url(/img/grupos/establecimientos.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  min-height: 220px;
+}
+.img-indumentaria{
+  background-image: url(/img/grupos/indumentaria.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  min-height: 220px;
+}
+.img-colegios{
+  background-image: url(/img/grupos/colegios.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  min-height: 220px;
+}
+.img-colonias{
+  background-image: url(/img/grupos/colonias.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  min-height: 220px;
 }
