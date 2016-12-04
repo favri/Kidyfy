@@ -27,7 +27,7 @@
 </head>
 <body class="bkg-grey">
   <div id="app">
-    <nav id="nav" class="navbar navbar-default navbar-static-top bkg-white shw-nav">
+    <nav id="nav" class="navbar navbar-default navbar-static-top bkg-white shw-nav nav-fixed">
       <div class="container">
         <div class="navbar-header">
 
@@ -101,7 +101,7 @@
   <script src="/js/app.js"></script>
   <script src="/js/controlesjs.js"></script>
   <script src="/js/faq.js"></script>
-  <script src="/js/main.5b5f0f23.js"></script>
+  <script src="/js/main.f1062ae1.js"></script>
   {{-- <script src="js/chat.js"></script> --}}
 </body>
 </html>

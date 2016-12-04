@@ -6,7 +6,7 @@
 @section('content')
 <div class="container">
 <div class="row">
-  <div class="col-sm-3 bkg-white brd-top">
+  <div class="col-sm-3 fixed-top bkg-white brd-top">
     <div class="pdtop20">
       <p class="font-size-large"><a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a></p>
       <br>
@@ -21,7 +21,7 @@
             <span class="icon"><i class="fa fa-hospital-o "></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="establecimientos"><a href="establecimientos/{{Auth::user()->id }}"> Establecimientos Medicos</a></label>
+            <label for="establecimientos"><a href="/establecimientos/{{Auth::user()->id }}"> Establecimientos Medicos</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -29,7 +29,7 @@
             <span class="icon"><i class="fa fa-stethoscope"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="medicos"><a href="medicos/{{Auth::user()->id }}"> Medicos</a></label>
+            <label for="medicos"><a href="/medicos/{{Auth::user()->id }}"> Medicos</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -37,7 +37,7 @@
             <span class="icon"><i class="fa fa-briefcase"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="indumentaria"><a href="indumentaria/{{Auth::user()->id }}"> Indumentaria</a></label>
+            <label for="indumentaria"><a href="/indumentaria/{{Auth::user()->id }}"> Indumentaria</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -45,7 +45,7 @@
             <span class="icon"><i class="fa fa-graduation-cap"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="Colegios"><a href="colegios/{{Auth::user()->id }}"> Colegios</a></label>
+            <label for="Colegios"><a href="/colegios/{{Auth::user()->id }}"> Colegios</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -53,7 +53,7 @@
             <span class="icon"><i class="fa fa-life-ring "></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="colonias"><a href="colonias/{{Auth::user()->id }}"> Colonias</a></label>
+            <label for="colonias"><a href="/colonias/{{Auth::user()->id }}"> Colonias</a></label>
           </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
       Estaremos felices de recibir tu opinión</a>
     </div>
   </div>
-  <div class="col-sm-7">
+  <div class="col-sm-7 fixed-top">
 
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
@@ -87,49 +87,17 @@
 
         </div>
       @endforeach
-        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-green">
-           <p>Anja</p>
-           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
-           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-pink">
-           <p>Anja</p>
-           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
-           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-yellow">
-           <p>Anja</p>
-           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
-           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1 commentbox post-color-purple">
-           <p>Anja</p>
-           <img src="bird.jpg" class="img-square" height="55" width="55" alt="Avatar">
-           <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-        </div>
     </div>
   </div>
-  <div class="col-sm-2 bkg-white brd-top">
+  <div class="col-sm-2 fixed-top bkg-white brd-top">
     <div class="pdtop20">
-      <p>Upcoming Events:</p>
-      <img src="paris.jpg" alt="Paris">
-      <p><strong>Paris</strong></p>
-      <p>Fri. 27 November 2015</p>
-      <button class="btn btn-primary">Info</button>
+      <img src="img/ads/huggies.jpeg" alt="" class="img-responsive" />
     </div>
     <div class="">
       <p>ADS</p>
     </div>
-    <div class="">
-      <p>ADS</p>
+    <div id="eventsapp">
     </div>
-    <div id="content"></div>
   </div>
 </div>
 </div>

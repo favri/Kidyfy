@@ -16,7 +16,6 @@ class Grupos extends Migration
       Schema::create('groups', function (Blueprint $table) {
         $table->increments('id');
         $table->string('group_name');
-        $table->string('color');
         $table->string('icon');
         $table->rememberToken();
         $table->timestamps();

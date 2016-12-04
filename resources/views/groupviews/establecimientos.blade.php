@@ -5,7 +5,7 @@
 @section('content')
   <div class="container">
     <div class="row">
-      <div id="lcol" class="col-sm-3 bkg-white brd-top col-right" onscroll="myFunction()">
+      <div id="lcol" class="col-sm-3 fixed-top bkg-white brd-top col-right" onscroll="myFunction()">
         <div class="pdtop20">
           <p class="font-size-large">
             @if (is_object(\Auth::user()->image))
@@ -15,7 +15,7 @@
           </p>
         </div>
         <div class="mgtop20 ">
-            <h4><a href="grupo/{{Auth::user()->id }}">Grupos</a></h4>
+            <h4><a href="/grupo/{{Auth::user()->id }}">Grupos</a></h4>
             <div class="row margin-btn-10">
               <div class="col-sm-1">
                 <span class="icon"><i class="fa fa-hospital-o"></i></span>
@@ -63,7 +63,7 @@
           Estaremos felices de recibir tu opinión</a>
         </div>
       </div>
-    <div class="col-sm-7 col-sm-offset-3">
+    <div class="col-sm-7 col-sm-offset-3 fixed-top">
       <div class="row">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white brd-top">
@@ -102,21 +102,16 @@
           </div>
         </div>
       </div>
-    <div class="col-sm-2 bkg-white brd-top">
+    <div class="col-sm-2 fixed-top bkg-white brd-top">
       <div class="pdtop20">
-        <p>Upcoming Events:</p>
-        <img src="paris.jpg" alt="Paris">
-        <p><strong>Paris</strong></p>
-        <p>Fri. 27 November 2015</p>
-        <button class="btn btn-primary">Info</button>
-      </div>
-      <div class="">
         <p>ADS</p>
       </div>
       <div class="">
         <p>ADS</p>
       </div>
-      <div id="content"></div>
+      <div id="eventsapp">
+      </div>
+    </div>
     </div>
   </div>
   </div>

@@ -45,7 +45,7 @@ class RegisterController extends Controller
       $user = \Auth::user()->update([
           'name' => $request['name'],
           'email' => $request['email'],
-          'password' => bcrypt($request['password']),
+          // 'password' => bcrypt($request['password']),
           'fecha_de_nacimiento'=>$request['fecha_de_nacimiento'],
           'genero'=>$request['genero'],
       ]);
