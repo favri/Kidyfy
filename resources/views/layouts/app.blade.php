@@ -27,7 +27,7 @@
 </head>
 <body class="bkg-grey">
   <div id="app">
-    <nav id="nav" class="navbar navbar-default navbar-static-top bkg-white shw-nav">
+    <nav id="nav" class="navbar navbar-default navbar-static-top bkg-white shw-nav nav-fixed">
       <div class="container">
         <div class="navbar-header">
 

@@ -6,7 +6,7 @@
 @section('content')
 <div class="container">
 <div class="row">
-  <div id="lcol" class="col-sm-3 bkg-white brd-top col-right" onscroll="myFunction()">
+  <div id="lcol" class="col-sm-3 bkg-white brd-top col-right fixed-top" onscroll="myFunction()">
     <div class="pdtop20">
       <p class="font-size-large">
         @if (is_object(\Auth::user()->image))
@@ -17,43 +17,43 @@
     </div>
     <div class="mgtop20 ">
         <h4><a href="grupo/{{Auth::user()->id }}">Grupos</a></h4>
-        <div class="row margin-btn-10">
-          <div class="col-sm-1">
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
             <span class="icon"><i class="fa fa-hospital-o"></i></span>
           </div>
-          <div class="col-sm-10 mgtop5">
+          <div class="col-sm-10 mgtop5 grouplist">
             <label for="establecimientos"><a href="establecimientos/{{Auth::user()->id }}"> Establecimientos Medicos</a></label>
           </div>
         </div>
-        <div class="row margin-btn-10">
-          <div class="col-sm-1">
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
             <span class="icon"><i class="fa fa-stethoscope"></i></span>
           </div>
-          <div class="col-sm-10 mgtop5">
+          <div class="col-sm-10 mgtop5 grouplist">
             <label for="medicos"><a href="medicos/{{Auth::user()->id }}"> Medicos</a></label>
           </div>
         </div>
-        <div class="row margin-btn-10">
-          <div class="col-sm-1">
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
             <span class="icon"><i class="fa fa-briefcase"></i></span>
           </div>
-          <div class="col-sm-10 mgtop4">
+          <div class="col-sm-10 mgtop4 grouplist">
             <label for="indumentaria"><a href="indumentaria/{{Auth::user()->id }}"> Indumentaria</a></label>
           </div>
         </div>
-        <div class="row margin-btn-10">
-          <div class="col-sm-1">
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
             <span class="icon"><i class="fa fa-graduation-cap"></i></span>
           </div>
-          <div class="col-sm-10 mgtop4">
+          <div class="col-sm-10 mgtop4 grouplist">
             <label for="Colegios"><a href="colegios/{{Auth::user()->id }}"> Colegios</a></label>
           </div>
         </div>
-        <div class="row margin-btn-10">
-          <div class="col-sm-1">
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
             <span class="icon"><i class="fa fa-life-ring"></i></span>
           </div>
-          <div class="col-sm-10 mgtop5">
+          <div class="col-sm-10 mgtop5 grouplist">
             <label for="colonias"><a href="colonias/{{Auth::user()->id }}"> Colonias</a></label>
           </div>
         </div>
@@ -64,7 +64,7 @@
       Estaremos felices de recibir tu opinión</a>
     </div>
   </div>
-  <div class="col-sm-7 col-sm-offset-3">
+  <div id="ccol" class="col-sm-7 col-sm-offset-3 fixed-top">
 
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1 postbox  bkg-white brd-top">
@@ -103,7 +103,7 @@
     </div>
 
   </div>
-  <div class="col-sm-2 bkg-white brd-top">
+  <div id="rcol" class="col-sm-2 bkg-white brd-top fixed-top">
     <div class="pdtop20">
       <p>
         <label for="AD1">

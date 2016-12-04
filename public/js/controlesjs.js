@@ -107,19 +107,30 @@
 //   window.location.href=pagina;
 // }
 
+// window.addEventListener("onresize", myFunction());
 
-window.onscroll = function() {myFunction()};
+    // if(window.innerWidth > 767){
+    //   window.onscroll = function() {myFunction()};
+    //
+    //   function myFunction() {
+    //       if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+    //           document.getElementById("lcol").className = "col-sm-3 bkg-white brd-top col-right fixed-top";
+    //           document.getElementById("nav").className = "navbar navbar-default navbar-static-top bkg-white shw-nav nav-fixed";
+    //       } else {
+    //           document.getElementById("lcol").className = "col-sm-3 bkg-white brd-top col-right";
+    //           document.getElementById("nav").className = "navbar navbar-default navbar-static-top bkg-white shw-nav";
+    //       }
+    //   }
+    // };
+    // else {
+    //   document.getElementById("lcol").className = "col-sm-3 bkg-white brd-top col-right fixed-top";
+    //   document.getElementById("nav").className = "navbar navbar-default navbar-static-top bkg-white shw-nav nav-fixed";
+    // }
 
-function myFunction() {
-    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-        document.getElementById("lcol").className = "col-sm-3 bkg-white brd-top col-right fixed-top";
-        document.getElementById("nav").className = "navbar navbar-default navbar-static-top bkg-white shw-nav nav-fixed";
-        console.log("hhhh");
-    } else {
-        document.getElementById("lcol").className = "col-sm-3 bkg-white brd-top col-right";
-        document.getElementById("nav").className = "navbar navbar-default navbar-static-top bkg-white shw-nav";
-    }
-}
+
+
+
+
 
 // window.onload = function(){
 //   // Captura Formulario Registro
