@@ -333,52 +333,47 @@ textarea{
 }
 
 .group-box{
-  background-color: rgba(251, 247, 247,0.9);
-  margin: 115px -20px -20px;
+  background: linear-gradient(to right, #ffffff , rgba(250, 251, 251, 0));
+  margin: 50px -20px -20px;
   padding: 10px 15px;
 }
 .group-box h3{
   margin-top: 0;
 }
 .img-medicos{
-  background-image: url(/img/grupos/medicos.jpg);
-  background-position: center center;
+  background-image: url(/img/grupos/GrupoMedicos.jpg);
+  background-position: right center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
-  min-height: 220px;
+  max-width: 700px;
+  min-height: 100px;
 }
 .img-establecimientos{
-  background-image: url(/img/grupos/establecimientos.jpg);
-  background-position: center center;
+  background-image: url(/img/grupos/GrupoHospitales.jpg);
+  background-position: right center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
-  min-height: 220px;
-}
+  max-width: 700px;
+  min-height: 100px;
+  }
 .img-indumentaria{
-  background-image: url(/img/grupos/indumentaria.jpg);
-  background-position: center center;
+  background-image: url(/img/grupos/GrupoIndumentaria.jpg);
+  background-position: right center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
-  min-height: 220px;
+  max-width: 700px;
+  min-height: 100px;
 }
 .img-colegios{
-  background-image: url(/img/grupos/colegios.jpg);
-  background-position: center center;
+  background-image: url(/img/grupos/GrupoColegios.jpg);
+  background-position: right center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
-  min-height: 220px;
+  max-width: 700px;
+  min-height: 100px;
 }
 .img-colonias{
-  background-image: url(/img/grupos/colonias.jpg);
-  background-position: center center;
+  background-image: url(/img/grupos/GrupoColonias.jpg);
+  background-position: right center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
-  min-height: 220px;
+  max-width: 700px;
+  min-height: 100px;
 }
 
 @media (max-width: 767px) {

@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 fixed-top">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="/registro/{{\Auth::user()->id}}" enctype="multipart/form-data">

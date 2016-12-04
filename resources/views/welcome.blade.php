@@ -7,13 +7,13 @@
   <div class="container">
   <div class="row">
   <!-- Columna Izquierda  -->
-  <div class="col-sm-8">
+  <div class="col-sm-8 fixed-top">
     <h1>Nuestos hijos, nuestro mundo</h1>
     <h3>La red social donde consultamos, sacamos dudas y aconsejamos</h3>
   </div>
   <!-- Termina Columna Izquierda  -->
   <!-- Columna Derecha -->
-  <div class="col-sm-3 col-sm-offset-1">
+  <div class="col-sm-3 col-sm-offset-1 fixed-top">
     <div class="panel panel-default">
         <div class="panel-body">
             {{-- Empieza Form --}}

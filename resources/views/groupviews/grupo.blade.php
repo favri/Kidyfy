@@ -6,7 +6,7 @@
 @section('content')
   <div class="container">
   <div class="row">
-    <div id="lcol" class="col-sm-3 bkg-white brd-top col-right" onscroll="myFunction()">
+    <div id="lcol" class="col-sm-3 fixed-top bkg-white brd-top col-right" onscroll="myFunction()">
       <div class="pdtop20">
         <p class="font-size-large">
           @if (is_object(\Auth::user()->image))
@@ -64,13 +64,13 @@
         Estaremos felices de recibir tu opinión</a>
       </div>
     </div>
-    <div class="col-sm-7 col-sm-offset-3">
+    <div class="col-sm-7 col-sm-offset-3 fixed-top">
       <div class="row">
           <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-establecimientos">
             <div class="group-box">
               <span class="icon pull-left"><i class="fa fa-hospital-o"></i></span><h3><a href="/establecimientos/{{Auth::user()->id }}">Establecimientos</a></h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Donde cuidar a nuestros hijos.
               </p>
             </div>
           </div>
@@ -78,7 +78,7 @@
             <div class="group-box">
               <span class="icon pull-left"><i class="fa fa-stethoscope"></i></span><h3><a href="/medicos/{{Auth::user()->id }}">Medicos</a></h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Un medico es una garantía
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@
       </div>
     </div>
 
-    <div class="col-sm-2 bkg-white brd-top">
+    <div class="col-sm-2 fixed-top bkg-white brd-top">
       <div class="pdtop20">
         <p>ADS</p>
       </div>

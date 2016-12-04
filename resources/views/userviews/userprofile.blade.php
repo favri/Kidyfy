@@ -6,7 +6,7 @@
 @section('content')
 <div class="container">
 <div class="row">
-  <div class="col-sm-3 bkg-white brd-top">
+  <div class="col-sm-3 fixed-top bkg-white brd-top">
     <div class="pdtop20">
       <p class="font-size-large"><a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a></p>
       <br>
@@ -21,7 +21,7 @@
             <span class="icon"><i class="fa fa-hospital-o "></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="establecimientos"><a href="establecimientos/{{Auth::user()->id }}"> Establecimientos Medicos</a></label>
+            <label for="establecimientos"><a href="/establecimientos/{{Auth::user()->id }}"> Establecimientos Medicos</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -29,7 +29,7 @@
             <span class="icon"><i class="fa fa-stethoscope"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="medicos"><a href="medicos/{{Auth::user()->id }}"> Medicos</a></label>
+            <label for="medicos"><a href="/medicos/{{Auth::user()->id }}"> Medicos</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -37,7 +37,7 @@
             <span class="icon"><i class="fa fa-briefcase"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="indumentaria"><a href="indumentaria/{{Auth::user()->id }}"> Indumentaria</a></label>
+            <label for="indumentaria"><a href="/indumentaria/{{Auth::user()->id }}"> Indumentaria</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -45,7 +45,7 @@
             <span class="icon"><i class="fa fa-graduation-cap"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="Colegios"><a href="colegios/{{Auth::user()->id }}"> Colegios</a></label>
+            <label for="Colegios"><a href="/colegios/{{Auth::user()->id }}"> Colegios</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -53,7 +53,7 @@
             <span class="icon"><i class="fa fa-life-ring "></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="colonias"><a href="colonias/{{Auth::user()->id }}"> Colonias</a></label>
+            <label for="colonias"><a href="/colonias/{{Auth::user()->id }}"> Colonias</a></label>
           </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
       Estaremos felices de recibir tu opinión</a>
     </div>
   </div>
-  <div class="col-sm-7">
+  <div class="col-sm-7 fixed-top">
 
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
@@ -89,7 +89,7 @@
       @endforeach
     </div>
   </div>
-  <div class="col-sm-2 bkg-white brd-top">
+  <div class="col-sm-2 fixed-top bkg-white brd-top">
     <div class="pdtop20">
       <img src="img/ads/huggies.jpeg" alt="" class="img-responsive" />
     </div>

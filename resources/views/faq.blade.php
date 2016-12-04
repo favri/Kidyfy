@@ -5,9 +5,9 @@
 @section('content')
   <div class="container-fluid">
   <div class="row">
-  <div class="col-sm-3"></div>
 
-  <div class="col-sm-6"><h1>FAQ:</h1>
+
+  <div class="col-sm-6 col-sm-offset-3 fixed-top"><h1>FAQ:</h1>
     <div class="contenedor">
       <div class="item">
         <div class="pregunta"<span class="icon"><i class="ion-ios-arrow-thin-down"></i></span>
@@ -54,7 +54,6 @@
 
    </div>
 
-  <div class="col-sm-3" ></div>
   </div>
 
 </div>
