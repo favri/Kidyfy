@@ -104,19 +104,14 @@
       </div>
     <div class="col-sm-2 bkg-white brd-top">
       <div class="pdtop20">
-        <p>Upcoming Events:</p>
-        <img src="paris.jpg" alt="Paris">
-        <p><strong>Paris</strong></p>
-        <p>Fri. 27 November 2015</p>
-        <button class="btn btn-primary">Info</button>
-      </div>
-      <div class="">
         <p>ADS</p>
       </div>
       <div class="">
         <p>ADS</p>
       </div>
-      <div id="content"></div>
+      <div id="eventsapp">
+      </div>
+    </div>
     </div>
   </div>
   </div>
