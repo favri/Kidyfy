@@ -5,17 +5,17 @@
 
 @section('content')
 <div class="container">
-<div class="row">
-  <div id="lcol" class="col-sm-3 bkg-white brd-top col-right fixed-top" onscroll="myFunction()">
-    <div class="pdtop20">
-      <p class="font-size-large">
-        @if (is_object(\Auth::user()->image))
-          <img src="/img/{{\Auth::user()->image->src}}" class="img-square" height="20" width="20" alt="Avatar">
-        @endif
-          <a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a>
-      </p>
-    </div>
-    <div class="mgtop20 ">
+  <div class="row">
+    <div id="lcol" class="col-sm-3 bkg-white brd-top col-right fixed-top" onscroll="myFunction()">
+      <div class="pdtop20">
+        <p class="font-size-large">
+          @if (is_object(\Auth::user()->image))
+            <img src="/img/{{\Auth::user()->image->src}}" class="img-square" height="20" width="20" alt="Avatar">
+          @endif
+            <a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a>
+        </p>
+      </div>
+      <div class="mgtop20 ">
         <h4><a href="grupo/{{Auth::user()->id }}">Grupos</a></h4>
         <div class="row margin-btn-10 grouplist">
           <div class="col-sm-1 grouplist">
@@ -57,29 +57,36 @@
             <label for="colonias"><a href="colonias/{{Auth::user()->id }}"> Colonias</a></label>
           </div>
         </div>
+      </div>
+      <div class="alert alert-info fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <a href="{{url ('/home/grupo')}}"><p><strong>¿Tienes sugerencias?</strong></p>
+        Estaremos felices de recibir tu opinión</a>
+      </div>
     </div>
-    <div class="alert alert-info fade in">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-      <a href="{{url ('/home/grupo')}}"><p><strong>¿Tienes sugerencias?</strong></p>
-      Estaremos felices de recibir tu opinión</a>
-    </div>
-  </div>
-  <div id="ccol" class="col-sm-7 col-sm-offset-3 fixed-top">
-
-    <div class="row">
+    <div id="ccol" class="col-sm-7 col-sm-offset-3 fixed-top">
+      <div class="row">
         <div class="col-sm-10 col-sm-offset-1 postbox  bkg-white brd-top">
           <p class="font-size-medium">¿Listo para Kidyar {{\Auth::user()->name}}?</p>
-           <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
+          <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
 
-           <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
+          <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
              {{ csrf_field() }}
              <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyarte?"> </textarea>
-             <input type="file" name="postfile" size="2mb" value="" style="display:inline-block">
-             <input type="number" name="group_id" value="1" hidden>
-             <button type="submit" class="btn btn-primary">Postear</button>
-           </form>
+             <div class="imp-posteo">
+               <form action="/file-upload" class="dropzone">
+                   <div class="fallback">
+                     <input name="file" type="file" multiple />
+                   </div>
+               </form>
 
-        </div>
+               <!-- <input type="file" name="postfile" size="2mb" value="" style="display:inline-block"> -->
+               <input type="number" name="group_id" value="1" hidden>
+               <button type="submit" class="btn btn-primary">Postear</button>
+             </div>
+         </form>
+       </div>
+      </div>
     </div>
 
     <div class="row">
@@ -130,7 +137,32 @@
     </div>
   </div>
 </div>
-</div>
 <!-- Finish MainContainer -->
+<script src="./js/dropzone.js"></script>
 @endsection
+
+@section('scripts')
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
+@endsection
+
 @extends('partials.footerkdf')
+
+<!-- <div class="col-md-4">
+  <div class="row">
+    @forelse($post->images as $image)
+      <div class="col-md-6">
+        <img src="/content/{{ $image->src }}" alt="{{ $post->name }}" class="img-responsive" />
+      </div>
+    @empty
+      <h3>
+        No hay imágenes cargadas.
+      </h3>
+    @endforelse
+  </div>
+</div> -->
+    <!-- <form action="/post/{{$post->id}}/imagespost" class="dropzone" method="post">
+      {{ csrf_field() }}
+      <div class="fallback">
+        <input name="file" type="file" multiple />
+      </div>
+    </form> -->
