@@ -41,6 +41,10 @@
         return $this->hasMany('Post' , 'user_id');
       }
 
+      public function UserSecondaries() {
+        return $this->hasOne('App\UserSecondarie');
+      }
+
       // public function friendships() {
       //   return $this->hasMany('Friendship' , 'user_id');
       // }

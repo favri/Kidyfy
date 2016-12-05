@@ -47,4 +47,9 @@ class UserSecondarie extends Model
     return $this->belongsTo('App\Group') ;
   }
 
+  public function doctor()
+  {
+    return $this->belongsTo('App\Doctor') ;
+  }
+
 }

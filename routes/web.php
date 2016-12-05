@@ -46,6 +46,8 @@ Route::get('faq', 'FaqController@faqs');
 
 Route::get('/grupo/{id}', 'GrupoController@view');
 
+Route::get('/doctores/{id}', 'DoctorController@view');
+
 Route::get('medicos/{id}', 'MedicosController@view');
 
 Route::get('establecimientos/{id}', 'EstablecimientosController@view');

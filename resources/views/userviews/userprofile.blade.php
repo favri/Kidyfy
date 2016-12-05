@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('titulo')
-  Mi Perfil - {{Auth::user()->name }}
+  HOla - {{Auth::user()->name }}
 @endsection
 
 @section('content')
@@ -9,6 +9,7 @@
 <div class="row">
   <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top" onscroll="myFunction()">
     <div class="pdtop20">
+      PUTO
       @if (is_object($user->image))
         <img src="/img/{{$user->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
       @endif
@@ -84,7 +85,7 @@
             <span class="icon"><i class="fa fa-heartbeat"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="indumentaria"><a href="#"> Dr.Perez</a></label>
+            <label for="doctor"><a href="#">HOLA</a></label>
           </div>
         </div>
     </div>
@@ -131,10 +132,7 @@
               </div>
             </div>
           </div>
-
-
         @endif
-
       @endforeach
     </div>
   </div>
