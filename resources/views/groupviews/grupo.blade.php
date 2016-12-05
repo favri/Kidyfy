@@ -22,7 +22,7 @@
               <span class="icon"><i class="fa fa-hospital-o"></i></span>
             </div>
             <div class="col-sm-10">
-              <label for="establecimientos"><a href="establecimientos/{{Auth::user()->id }}"> Establecimientos Medicos</a></label>
+              <label for="establecimientos"><a href="establecimientos/{{Auth::user()->id }}"> Establecimientos Médicos</a></label>
             </div>
           </div>
           <div class="row margin-btn-10">
@@ -30,7 +30,7 @@
               <span class="icon"><i class="fa fa-stethoscope"></i></span>
             </div>
             <div class="col-sm-10">
-              <label for="medicos"><a href="medicos/{{Auth::user()->id }}"> Medicos</a></label>
+              <label for="medicos"><a href="medicos/{{Auth::user()->id }}"> Médicos</a></label>
             </div>
           </div>
           <div class="row margin-btn-10">
@@ -70,15 +70,15 @@
             <div class="group-box">
               <span class="icon pull-left"><i class="fa fa-hospital-o"></i></span><h3><a href="/establecimientos/{{Auth::user()->id }}">Establecimientos</a></h3>
               <p>
-                Donde cuidar a nuestros hijos.
+                Dónde cuidar a nuestros hijos.
               </p>
             </div>
           </div>
           <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-medicos">
             <div class="group-box">
-              <span class="icon pull-left"><i class="fa fa-stethoscope"></i></span><h3><a href="/medicos/{{Auth::user()->id }}">Medicos</a></h3>
+              <span class="icon pull-left"><i class="fa fa-stethoscope"></i></span><h3><a href="/medicos/{{Auth::user()->id }}">Médicos</a></h3>
               <p>
-                Un medico es una garantía
+                Un médico es una garantía
               </p>
             </div>
           </div>

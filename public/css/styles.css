@@ -61,6 +61,9 @@
 .brd-top{
   border-top:2px solid rgba(54, 102, 255, 0.1)
 }
+.brd-phto{
+  border: 2px solid #3666ff;
+}
 .margin-btn-10{
   margin-bottom: 10px;
 }

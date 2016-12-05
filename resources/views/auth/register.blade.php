@@ -74,7 +74,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('genero') ? ' has-error' : '' }}">
-                            <label for="genero" class="col-md-4 control-label">Genero</label>
+                            <label for="genero" class="col-md-4 control-label">Género</label>
 
                             <div class="col-md-6">
                                 <input  type="radio"  name="genero" value="F" checked>Femenino
