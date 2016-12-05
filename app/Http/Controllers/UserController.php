@@ -11,10 +11,10 @@ class UserController extends Controller
 {
   public function view($id)
   {
-      $user = User::find(Auth::user()->id);
-      $recipient = User::find($id);
-      $posts = Post::where("user_id", "=", $recipient->id)->get();
-      return view('userviews.userfriend', compact('user', 'posts','recipient'));
+      $user = User::find($id);
+      // $recipient = User::find($id);
+      $posts = Post::where("user_id", "=", $user->id)->get();
+      return view('userviews.userprofile', compact('user', 'posts'));
   }
 
 }

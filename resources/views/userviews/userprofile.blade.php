@@ -6,18 +6,18 @@
 @section('content')
 <div class="container">
 <div class="row">
-  <div class="col-sm-3 fixed-top bkg-white brd-top pdtop20">
-      @if (is_object(\Auth::user()->image))
-        <img src="/img/{{\Auth::user()->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
+  <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top" onscroll="myFunction()">
+    <div class="pdtop20">
+      @if (is_object($user->image))
+        <img src="/img/{{$user->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
       @endif
-      <div class="pdtop20">
-        <p class="font-size-large"><a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a></p>
+        <p class="font-size-large"><a href="/{{$user->id }}">{{$user->name}}</a></p>
       </div>
     <div class="mgtop20">
         <div class="row margin-btn-10">
-          <p>
+          {{-- <p>
             Solicitudes de amistad pendientes: {{$user->hasFriendRequestFrom($recipient)}}
-          </p>
+          </p> --}}
           <div class="col-sm-2">
             <span class="icon"><i class="fa fa-comments"></i></span>
           </div>
@@ -55,41 +55,26 @@
             <span class="icon"><i class="fa fa-child"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="indumentaria"><a href="#"> Lucas</a></label>
+            <label for="indumentaria">{{$user->UserSecondaries->hijos}}</label>
           </div>
         </div>
         <h4><a href="/grupo/{{Auth::user()->id }}">Grupos Favoritos:</a></h4>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
-            <span class="icon"><i class="fa fa-briefcase"></i></span>
+            <span class="icon"><i class=""></i></span>
           </div>
           <div class="col-sm-10">
             <label for="indumentaria"><a href="/indumentaria/{{Auth::user()->id }}"> Indumentaria</a></label>
           </div>
         </div>
-        <div class="row margin-btn-10">
-          <div class="col-sm-2">
-            <span class="icon"><i class="fa fa-graduation-cap"></i></span>
-          </div>
-          <div class="col-sm-10">
-            <label for="Colegios"><a href="/colegios/{{Auth::user()->id }}"> Colegios</a></label>
-          </div>
-        </div>
-        <div class="row margin-btn-10">
-          <div class="col-sm-2">
-            <span class="icon"><i class="fa fa-life-ring "></i></span>
-          </div>
-          <div class="col-sm-10">
-            <label for="colonias"><a href="/colonias/{{Auth::user()->id }}"> Colonias</a></label>
-          </div>
-        </div>
+
         <h4><a href="#">Obra Social:</a></h4>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
             <span class="icon"><i class="fa fa-id-card"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="indumentaria"><a href="#">OSDE</a></label>
+            <label for="indumentaria">{{$user->UserSecondaries->obrasocial}}</label>
           </div>
         </div>
         <h4><a href="#">Médicos Recomendados:</a></h4>
@@ -108,38 +93,50 @@
       Estaremos felices de recibir tu opinión</a>
     </div>
   </div>
-  <div class="col-sm-7 fixed-top">
+  <div id="ccol" class="col-sm-7 fixed-top">
 
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
-        <p>
-          VISTA DE USUARIO A TRABAJAR!
-        </p>
-      </div>
       @foreach ($posts as $post)
         <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
           <div class="row">
             <div class="col-sm-12">
               <p class="font-size-medium">
-                {{ $post->user->name }} el {{$post->created_at}}
+                <a href="/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
               </p>
             </div>
-            <div class="col-sm-10">
-              <p class="font-size-large"><img src="/img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
+          </div>
+          <div class="row">
+            <div class="col-sm-12" style="padding-right:0px;">
+              <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
+              <span class="icon-post pull-right"><a href="{{$post->group->group_name}}/{{\Auth::user()->id}}"><i class="{{$post->group->icon}}"></i></a></span>
             </div>
           </div>
-
-
         </div>
       @endforeach
     </div>
   </div>
-  <div class="col-sm-2 fixed-top bkg-white brd-top">
+  <div id="rcol" class="col-sm-2 bkg-white brd-top fixed-top">
     <div class="pdtop20">
-      <img src="img/ads/huggies.jpeg" alt="" class="img-responsive" />
+      <p>
+        <label for="AD1">
+          <a href="https://www.huggies.com.ar/">
+            <img src="http://d26lpennugtm8s.cloudfront.net/stores/016/311/products/campeones-gx56-nuevo-815ee51a774242f64726ac0aa40e8f3d-1024-1024.jpg" alt="" class="img-responsive" />
+            <h4>Huggies</h4>
+            Acompañando la salud de tu bebé.
+          </a>
+        </label>
+      </p>
     </div>
     <div class="">
-      <p>ADS</p>
+      <p>
+        <label for="AD2">
+          <a href="http://www.trinidadpalermo.com.ar/">
+            <img src="http://clinica-web.com.ar/wp-content/uploads/2016/05/sanatorio-trinidad-san-isidro.jpg" alt="" class="img-responsive" />
+            <h4>Sanatorio de la Trinidad</h4>
+            Nuestra prioridad es tu bienestar.
+          </a>
+        </label>
+      </p>
     </div>
     <div id="eventsapp">
     </div>
