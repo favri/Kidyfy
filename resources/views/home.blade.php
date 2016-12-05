@@ -84,21 +84,40 @@
 
     <div class="row">
       @foreach ($posts as $post)
-        <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
-          <div class="row">
-            <div class="col-sm-12">
-              <p class="font-size-medium">
-                <a href="/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
-              </p>
+        @if ($post->group->group_name != "general")
+          <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
+            <div class="row">
+              <div class="col-sm-12">
+                <p class="font-size-medium">
+                  <a href="/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12" style="padding-right:0px;">
+                <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
+                <span class="icon-post pull-right"><a href="{{$post->group->group_name}}/{{\Auth::user()->id}}"><i class="{{$post->group->icon}}"></i></a></span>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-12" style="padding-right:0px;">
-              <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
-              <span class="icon-post pull-right"><a href="{{$post->group->group_name}}/{{\Auth::user()->id}}"><i class="{{$post->group->icon}}"></i></a></span>
+
+        @else
+          <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
+            <div class="row">
+              <div class="col-sm-12">
+                <p class="font-size-medium">
+                  <a href="/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12" style="padding-right:0px;">
+                <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
+                <span class="icon-post pull-right"><a href="#"><i class="{{$post->group->icon}}"></i></a></span>
+              </div>
             </div>
           </div>
-        </div>
+        @endif
       @endforeach
     </div>
 

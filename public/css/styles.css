@@ -109,6 +109,10 @@
   margin-top: 4px;
 }
 
+.capitalize{
+  text-transform: capitalize;
+}
+
 .navbar{
   min-height: 20px;
 }
