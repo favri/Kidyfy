@@ -55,3 +55,7 @@ Route::get('colegios/{id}', 'ColegiosController@view');
 Route::get('colonias/{id}', 'ColoniasController@view');
 
 Route::get('/amistades', 'FriendshipController@getIndex');
+
+Route::post('contact','ContactoController@store');
+
+Route::get('contact','ContactoController@form');

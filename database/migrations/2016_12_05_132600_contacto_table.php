@@ -6,23 +6,18 @@ use Illuminate\Database\Migrations\Migration;
 
 class ContactoTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        //
-    }
+  public function up(){
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        //
+      Schema::create('contacts', function (Blueprint $table) {
+        $table->string('name_contact')->unsigned();
+        $table->string('subject_contact')->unsigned();
+        $table->string('contact_text')->unsigned();
+        $table->timestamps();
+    });
+  }
+
+    public function down(){
+
+        Schema::drop('contacts');
     }
 }
