@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('titulo')
-  HOla - {{Auth::user()->name }}
+  Mi perfil - {{Auth::user()->name }}
 @endsection
 
 @section('content')
@@ -9,7 +9,6 @@
 <div class="row">
   <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top" onscroll="myFunction()">
     <div class="pdtop20">
-      PUTO
       @if (is_object($user->image))
         <img src="/img/{{$user->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
       @endif
@@ -17,9 +16,6 @@
       </div>
     <div class="mgtop20">
         <div class="row margin-btn-10">
-          {{-- <p>
-            Solicitudes de amistad pendientes: {{$user->hasFriendRequestFrom($recipient)}}
-          </p> --}}
           <div class="col-sm-2">
             <span class="icon"><i class="fa fa-comments"></i></span>
           </div>
@@ -32,7 +28,7 @@
             <span class="icon"><i class="fa fa-users"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="amigos"><a href="#"> Amigos</a></label>
+            <label for="amigos"><a href="#">Amigos</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -51,7 +47,7 @@
             <label for="eventos"><a href="#"> Eventos</a></label>
           </div>
         </div>
-        <h4><a href="#">Hijos:</a></h4>
+        <h4><a href="#">Hijos</a></h4>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
             <span class="icon"><i class="fa fa-child"></i></span>
@@ -85,7 +81,7 @@
             <span class="icon"><i class="fa fa-heartbeat"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="doctor"><a href="#">HOLA</a></label>
+            <label for="doctor"><a href="#">{{$user->UserSecondaries->doctor->name}}</a></label>
           </div>
         </div>
     </div>

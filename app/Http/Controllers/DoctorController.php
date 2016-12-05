@@ -20,6 +20,5 @@ class DoctorController extends Controller
       $user = User::find($id);
       $doctors = DB::table('doctors')->get();
       return view('doctorviews.doctorlist', compact('user','doctors'));
-      return view('doctorviews.doctorlist');
   }
 }
