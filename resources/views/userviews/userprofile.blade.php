@@ -6,32 +6,56 @@
 @section('content')
 <div class="container">
 <div class="row">
-  <div class="col-sm-3 fixed-top bkg-white brd-top">
-    <div class="pdtop20">
-      <p class="font-size-large"><a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a></p>
-      <br>
+  <div class="col-sm-3 fixed-top bkg-white brd-top pdtop20">
       @if (is_object(\Auth::user()->image))
-        <img src="/img/{{\Auth::user()->image->src}}" class="img-square" height="65" width="65" alt="Avatar">
+        <img src="/img/{{\Auth::user()->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
       @endif
-    </div>
-    <div class="mgtop20 ">
-        <h4><a href="/grupo/{{Auth::user()->id }}">Grupos</a></h4>
+      <div class="pdtop20">
+        <p class="font-size-large"><a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a></p>
+      </div>
+    <div class="mgtop20">
         <div class="row margin-btn-10">
           <div class="col-sm-2">
-            <span class="icon"><i class="fa fa-hospital-o "></i></span>
+            <span class="icon"><i class="fa fa-comments"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="establecimientos"><a href="/establecimientos/{{Auth::user()->id }}"> Establecimientos Medicos</a></label>
+            <label for="indumentaria"><a href="#"> Mensajes</a></label>
           </div>
         </div>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
-            <span class="icon"><i class="fa fa-stethoscope"></i></span>
+            <span class="icon"><i class="fa fa-users"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="medicos"><a href="/medicos/{{Auth::user()->id }}"> Medicos</a></label>
+            <label for="indumentaria"><a href="#"> Amigos</a></label>
           </div>
         </div>
+        <div class="row margin-btn-10">
+          <div class="col-sm-2">
+            <span class="icon"><i class="fa fa-picture-o"></i></span>
+          </div>
+          <div class="col-sm-10">
+            <label for="Colegios"><a href="#"> Fotos</a></label>
+          </div>
+        </div>
+        <div class="row margin-btn-10">
+          <div class="col-sm-2">
+            <span class="icon"><i class="fa fa-calendar-check-o"></i></span>
+          </div>
+          <div class="col-sm-10">
+            <label for="colonias"><a href="#"> Eventos</a></label>
+          </div>
+        </div>
+        <h4><a href="#">Hijos:</a></h4>
+        <div class="row margin-btn-10">
+          <div class="col-sm-2">
+            <span class="icon"><i class="fa fa-child"></i></span>
+          </div>
+          <div class="col-sm-10">
+            <label for="indumentaria"><a href="#"> Lucas</a></label>
+          </div>
+        </div>
+        <h4><a href="/grupo/{{Auth::user()->id }}">Grupos Favoritos:</a></h4>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
             <span class="icon"><i class="fa fa-briefcase"></i></span>
@@ -54,6 +78,24 @@
           </div>
           <div class="col-sm-10">
             <label for="colonias"><a href="/colonias/{{Auth::user()->id }}"> Colonias</a></label>
+          </div>
+        </div>
+        <h4><a href="#">Obra Social:</a></h4>
+        <div class="row margin-btn-10">
+          <div class="col-sm-2">
+            <span class="icon"><i class="fa fa-id-card"></i></span>
+          </div>
+          <div class="col-sm-10">
+            <label for="indumentaria"><a href="#">OSDE</a></label>
+          </div>
+        </div>
+        <h4><a href="#">Médicos Recomendados:</a></h4>
+        <div class="row margin-btn-10">
+          <div class="col-sm-2">
+            <span class="icon"><i class="fa fa-heartbeat"></i></span>
+          </div>
+          <div class="col-sm-10">
+            <label for="indumentaria"><a href="#"> Dr.Perez</a></label>
           </div>
         </div>
     </div>

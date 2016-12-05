@@ -8,7 +8,7 @@
   <div class="row">
   <!-- Columna Izquierda  -->
   <div class="col-sm-8 fixed-top">
-    <h1>Nuestos hijos, nuestro mundo</h1>
+    <h1>Nuestros hijos, nuestro mundo</h1>
     <h3>La red social donde consultamos, sacamos dudas y aconsejamos</h3>
   </div>
   <!-- Termina Columna Izquierda  -->

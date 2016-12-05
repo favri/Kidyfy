@@ -21,7 +21,7 @@
                 <span class="icon"><i class="fa fa-hospital-o"></i></span>
               </div>
               <div class="col-sm-10 mgtop5">
-                <label for="establecimientos"><a href="/establecimientos/{{Auth::user()->id }}"> Establecimientos Medicos</a></label>
+                <label for="establecimientos"><a href="/establecimientos/{{Auth::user()->id }}"> Establecimientos Médicos</a></label>
               </div>
             </div>
             <div class="row margin-btn-10">
@@ -29,7 +29,7 @@
                 <span class="icon"><i class="fa fa-stethoscope"></i></span>
               </div>
               <div class="col-sm-10 mgtop5">
-                <label for="medicos"><a href="/medicos/{{Auth::user()->id }}"> Medicos</a></label>
+                <label for="medicos"><a href="/medicos/{{Auth::user()->id }}"> Médicos</a></label>
               </div>
             </div>
             <div class="row margin-btn-10">
