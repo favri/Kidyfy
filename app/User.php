@@ -4,12 +4,14 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Hootlex\Friendships\Traits\Friendable;
 use App\Post;
 use App\Group;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use Friendable;
 
     /**
      * The attributes that are mass assignable.
@@ -36,5 +38,7 @@ class User extends Authenticatable
     public function post() {
       return $this->hasMany('Post' , 'user_id');
     }
+
+
 
 }
