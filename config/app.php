@@ -166,11 +166,6 @@ return [
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
-<<<<<<< HEAD
-        // Hootlex\Friendships\FriendshipsServiceProvider::class,
-=======
-        //Hootlex\Friendships\FriendshipsServiceProvider::class,
->>>>>>> d64d22f3b2fcb0e2c98a3692419a6a6166f4d54a
         /*
          * Package Service Providers...
          */
