@@ -6,18 +6,46 @@
 @section('content')
 <div class="container">
 <div class="row">
-  <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top" onscroll="myFunction()">
-    <div class="pdtop20">
-      @if (is_object($user->image))
-        <img src="/img/{{$user->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
+  <div class="col-sm-3 fixed-top bkg-white brd-top pdtop20">
+      @if (is_object($recipient->image))
+        <img src="/img/{{$recipient->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
       @endif
-        <p class="font-size-large"><a href="/{{$user->id }}">{{$user->name}}</a></p>
+      <div class="pdtop20">
+        <p class="font-size-large"><a href="/home/{{Auth::user()->id }}">{{$recipient->name}}</a></p>
       </div>
     <div class="mgtop20">
+      @if ($user->id != $recipient->id )
+        <form class="" action="{{$user->befriend($recipient)}}" method="post">
+          <button type="button" name="addFriend">Agregar Amigo!</button>
+        </form>
+      @endif
+
+        <p>
+          @php
+            $pendientes = $user->hasFriendRequestFrom($recipient)
+          @endphp
+        
+          Solicitudes de amistad pendientes: {{$pendientes}}
+          {{-- @php
+            $amistades = $user->getPendingFriendships();
+          @endphp
+
+          @foreach ($amistades as $amistad)
+            @if ($amistad->recipient->id === Auth::user()->id )
+              <p>
+                {{$amistad->sender->name}}
+              </p>
+              <form class="" action="{{$amistad->sender->acceptFriendRequest($recipient)}}" method="post">
+                <button type="button" name="status" value="1">Aceptar!</button>
+              </form>
+          @endif
+          @endforeach --}}
+
+
+
+
         <div class="row margin-btn-10">
-          {{-- <p>
-            Solicitudes de amistad pendientes: {{$user->hasFriendRequestFrom($recipient)}}
-          </p> --}}
+          <a href=""></a>
           <div class="col-sm-2">
             <span class="icon"><i class="fa fa-comments"></i></span>
           </div>
@@ -31,6 +59,17 @@
           </div>
           <div class="col-sm-10">
             <label for="indumentaria"><a href="#"> Amigos</a></label>
+            {{-- @php
+              $amigos = $user->getAcceptedFriendships()
+            @endphp
+            @foreach ($amigos as $amigo)
+              @if ($amigo->status === 1 )
+                <p>
+                  <a href="/{{$amigo->sender->id}}">{{$amigo->sender->name}}</a>
+                </p>
+              @endif
+
+            @endforeach --}}
           </div>
         </div>
         <div class="row margin-btn-10">
@@ -55,26 +94,41 @@
             <span class="icon"><i class="fa fa-child"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="indumentaria">{{$user->UserSecondaries->hijos}}</label>
+            <label for="indumentaria"><a href="#"> Lucas</a></label>
           </div>
         </div>
         <h4><a href="/grupo/{{Auth::user()->id }}">Grupos Favoritos:</a></h4>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
-            <span class="icon"><i class=""></i></span>
+            <span class="icon"><i class="fa fa-briefcase"></i></span>
           </div>
           <div class="col-sm-10">
             <label for="indumentaria"><a href="/indumentaria/{{Auth::user()->id }}"> Indumentaria</a></label>
           </div>
         </div>
-
+        <div class="row margin-btn-10">
+          <div class="col-sm-2">
+            <span class="icon"><i class="fa fa-graduation-cap"></i></span>
+          </div>
+          <div class="col-sm-10">
+            <label for="Colegios"><a href="/colegios/{{Auth::user()->id }}"> Colegios</a></label>
+          </div>
+        </div>
+        <div class="row margin-btn-10">
+          <div class="col-sm-2">
+            <span class="icon"><i class="fa fa-life-ring "></i></span>
+          </div>
+          <div class="col-sm-10">
+            <label for="colonias"><a href="/colonias/{{Auth::user()->id }}"> Colonias</a></label>
+          </div>
+        </div>
         <h4><a href="#">Obra Social:</a></h4>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
             <span class="icon"><i class="fa fa-id-card"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="indumentaria">{{$user->UserSecondaries->obrasocial}}</label>
+            <label for="indumentaria"><a href="#">OSDE</a></label>
           </div>
         </div>
         <h4><a href="#">Médicos Recomendados:</a></h4>
@@ -93,50 +147,38 @@
       Estaremos felices de recibir tu opinión</a>
     </div>
   </div>
-  <div id="ccol" class="col-sm-7 fixed-top">
+  <div class="col-sm-7 fixed-top">
 
     <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
+        <p>
+          VISTA DE USUARIO A TRABAJAR!
+        </p>
+      </div>
       @foreach ($posts as $post)
         <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
           <div class="row">
             <div class="col-sm-12">
               <p class="font-size-medium">
-                <a href="/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
+                {{ $post->user->name }} el {{$post->created_at}}
               </p>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12" style="padding-right:0px;">
-              <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
-              <span class="icon-post pull-right"><a href="{{$post->group->group_name}}/{{\Auth::user()->id}}"><i class="{{$post->group->icon}}"></i></a></span>
+            <div class="col-sm-10">
+              <p class="font-size-large"><img src="/img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
             </div>
           </div>
+
+
         </div>
       @endforeach
     </div>
   </div>
-  <div id="rcol" class="col-sm-2 bkg-white brd-top fixed-top">
+  <div class="col-sm-2 fixed-top bkg-white brd-top">
     <div class="pdtop20">
-      <p>
-        <label for="AD1">
-          <a href="https://www.huggies.com.ar/">
-            <img src="http://d26lpennugtm8s.cloudfront.net/stores/016/311/products/campeones-gx56-nuevo-815ee51a774242f64726ac0aa40e8f3d-1024-1024.jpg" alt="" class="img-responsive" />
-            <h4>Huggies</h4>
-            Acompañando la salud de tu bebé.
-          </a>
-        </label>
-      </p>
+      <img src="img/ads/huggies.jpeg" alt="" class="img-responsive" />
     </div>
     <div class="">
-      <p>
-        <label for="AD2">
-          <a href="http://www.trinidadpalermo.com.ar/">
-            <img src="http://clinica-web.com.ar/wp-content/uploads/2016/05/sanatorio-trinidad-san-isidro.jpg" alt="" class="img-responsive" />
-            <h4>Sanatorio de la Trinidad</h4>
-            Nuestra prioridad es tu bienestar.
-          </a>
-        </label>
-      </p>
+      <p>ADS</p>
     </div>
     <div id="eventsapp">
     </div>

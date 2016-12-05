@@ -30,13 +30,13 @@ class HomeController extends Controller
       return view('home', compact('posts'));
     }
 
-    public function view($id)
-    {
-        $user = User::find($id);
-        $posts = Post::where("user_id", "=", $user->id)->get();
-        return view('userviews.userprofile', compact('user', 'posts'));
-    }
-
+    // public function view($id)
+    // {
+    //     $user = User::find(Auth::user()->id);
+    //     $recipient = User::find($id);
+    //     $posts = Post::where("user_id", "=", $user->id)->get();
+    //     return view('userviews.userprofile', compact('user', 'posts','$recipient'));
+    // }
 
 
 }

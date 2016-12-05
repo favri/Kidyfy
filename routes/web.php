@@ -40,6 +40,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/home/{id}' , 'HomeController@view');
 
+Route::get('/{id}' , 'UserController@view');
+
 Route::get('faq', 'FaqController@faqs');
 
 Route::get('/grupo/{id}', 'GrupoController@view');
@@ -53,9 +55,12 @@ Route::get('indumentaria/{id}', 'IndumentariaController@view');
 Route::get('colegios/{id}', 'ColegiosController@view');
 
 Route::get('colonias/{id}', 'ColoniasController@view');
+<<<<<<< HEAD
 
 Route::get('/amistades', 'FriendshipController@getIndex');
 
 Route::post('contact','ContactoController@store');
 
 Route::get('contact','ContactoController@form');
+=======
+>>>>>>> 3bd2441f2bd9eb00c04bfdf732f9f3ebdbfef563
