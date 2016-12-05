@@ -53,3 +53,5 @@ Route::get('indumentaria/{id}', 'IndumentariaController@view');
 Route::get('colegios/{id}', 'ColegiosController@view');
 
 Route::get('colonias/{id}', 'ColoniasController@view');
+
+Route::get('/amistades', 'FriendshipController@getIndex');

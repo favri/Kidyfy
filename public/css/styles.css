@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Rubik:300i,400,700';
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
 
 *{ box-sizing: border-box;
 }
@@ -7,7 +7,7 @@
     margin: 0 auto;
 }
  body{
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 10px;
 
   padding-bottom: 80px;
@@ -61,6 +61,9 @@
 .brd-top{
   border-top:2px solid rgba(54, 102, 255, 0.1)
 }
+.brd-phto{
+  border: 2px solid #3666ff;
+}
 .margin-btn-10{
   margin-bottom: 10px;
 }
@@ -88,7 +91,6 @@
   padding: 40px;
 }
 
-
 .mgright10{
   margin-right: 10px;
 }
@@ -99,6 +101,16 @@
 
 .mgtop10{
   margin-top: 10px;
+}
+.mgtop5{
+  margin-top: 5px;
+}
+.mgtop4{
+  margin-top: 4px;
+}
+
+.navbar{
+  min-height: 20px;
 }
 .navbar-brand{
   padding: 5px 5px;
@@ -121,6 +133,20 @@
   color:#3666ff;
 }
 
+.navbar-default .navbar-nav > .open > a{
+  color: #3666ff;
+  font-size: 1.4em;
+}
+
+.dropdown-menu >li {
+  margin: 0;
+  margin: 10 0 10 15;
+}
+.dropdown-menu >li >a{
+  color: #3666ff;
+  padding: 0px;
+}
+
 .dropdown-toggle{
   color:#3666ff;
   font-size: 1.4em;
@@ -131,17 +157,9 @@
 .dropdown-menu > li > a:focus,.dropdown-menu > li > a:hover{
   background-color: white;
 }
-.navbar-default .navbar-nav > .open > a{
-  color: #3666ff;
-  font-size: 1.4em;
-}
-.dropdown-menu >li >a{
-  color: #3666ff;
-  padding: 0px;
-}
 
 .navbar-fixed-bottom a{
-  font-size: 1.6em;
+  font-size: 1.2em;
   padding-left: 10px;
 }
 
@@ -171,11 +189,18 @@
 
 .col-right{
   position: fixed;
-  z-index: 100;
+  z-index: 1;
+  width: 22%;
+}
+
+.nav-fixed{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 .fixed-top{
-  top: 10;
+  top: 90px;
 }
 
 #form-registro{
@@ -300,10 +325,103 @@ textarea{
   height: 100px;
 }
 
+.ul-react-events{
+  padding: 0;
+}
+
+.ul-react-events li{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.group-box{
+  background: linear-gradient(to right, #ffffff , rgba(250, 251, 251, 0));
+  margin: 50px -20px -20px;
+  padding: 10px 15px;
+}
+.group-box h3{
+  margin-top: 0;
+}
 .img-medicos{
-  background-image: url(/img/grupos/medicos.jpg);
-  background-position: center center;
+  background-image: url(/img/grupos/GrupoMedicos.jpg);
+  background-position: right center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
+  max-width: 700px;
+  min-height: 100px;
+}
+.img-establecimientos{
+  background-image: url(/img/grupos/GrupoHospitales.jpg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  max-width: 700px;
+  min-height: 100px;
+  }
+.img-indumentaria{
+  background-image: url(/img/grupos/GrupoIndumentaria.jpg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  max-width: 700px;
+  min-height: 100px;
+}
+.img-colegios{
+  background-image: url(/img/grupos/GrupoColegios.jpg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  max-width: 700px;
+  min-height: 100px;
+}
+.img-colonias{
+  background-image: url(/img/grupos/GrupoColonias.jpg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  max-width: 700px;
+  min-height: 100px;
+}
+
+@media (max-width: 767px) {
+
+  .navbar {
+    padding-bottom: 20px;
+  }
+  .col-right{
+    position: relative;;
+    z-index: 1;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  .grouplist{
+    display: inline-block;
+  }
+  .grouplist a{
+    margin-left: -30px;
+    margin-right: 5px;
+  }
+}
+
+/* Styles Faq*/
+.pregunta {
+  margin:  10px 10px 0px 10px ;
+  border-bottom:  2px solid black;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.4em;
+  width: 100%;
+  color: #3666ff;
+}
+
+.respuesta {
+  margin:  0px 10px ;
+  padding: 10px;
+  display: none;
+  font-size: 1.4em;
+  width: 100%;
+  color: #3666ff;
+
+}
+.ion-ios-arrow-thin-down{
+
+  font-size: 2em;
+  float: right;
 }

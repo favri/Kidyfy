@@ -27,17 +27,17 @@
 </head>
 <body class="bkg-grey">
   <div id="app">
-    <nav class="navbar navbar-default navbar-static-top bkg-white shw-nav" >
+    <nav id="nav" class="navbar navbar-default navbar-static-top bkg-white shw-nav nav-fixed">
       <div class="container">
         <div class="navbar-header">
 
           <!-- Collapsed Hamburger -->
-          {{-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
               <span class="sr-only">Toggle Navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-          </button> --}}
+          </button>
 
           <!-- Branding Image -->
           <a class="navbar-brand" href="{{ url('/') }}">
@@ -99,9 +99,9 @@
 
   <!-- Scripts -->
   <script src="/js/app.js"></script>
-  <script src="js/controlesjs.js"></script>
-  <script src="js/faq.js"></script>
-  <script src="js/main.215a2b74.js"></script>
+  <script src="/js/controlesjs.js"></script>
+  <script src="/js/faq.js"></script>
+  <script src="/js/main.f1062ae1.js"></script>
   {{-- <script src="js/chat.js"></script> --}}
 </body>
 </html>

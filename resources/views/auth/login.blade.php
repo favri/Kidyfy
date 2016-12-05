@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-4 col-md-offset-4 fixed-top">
             <div class="panel panel-default">
               <div class="panel-body">
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">

@@ -20,11 +20,8 @@ class RegisterController extends Controller
     public function actualizar (Request $request)
     {
         $user = User::find($request->id);
-        echo $user;
-        echo "<br>";
-        echo $user->image->src;
-        echo "<br>";
-        if ($request->file) {
+
+          if ($request->file) {
           // Borrar avatar
           //dd($request->file);
           //dd(\Auth::user()->image->src);
@@ -48,7 +45,7 @@ class RegisterController extends Controller
       $user = \Auth::user()->update([
           'name' => $request['name'],
           'email' => $request['email'],
-          'password' => bcrypt($request['password']),
+          // 'password' => bcrypt($request['password']),
           'fecha_de_nacimiento'=>$request['fecha_de_nacimiento'],
           'genero'=>$request['genero'],
       ]);
