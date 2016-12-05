@@ -40,6 +40,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/home/{id}' , 'HomeController@view');
 
+Route::get('/{id}' , 'UserController@view');
+
 Route::get('faq', 'FaqController@faqs');
 
 Route::get('/grupo/{id}', 'GrupoController@view');
@@ -53,5 +55,3 @@ Route::get('indumentaria/{id}', 'IndumentariaController@view');
 Route::get('colegios/{id}', 'ColegiosController@view');
 
 Route::get('colonias/{id}', 'ColoniasController@view');
-
-Route::get('/amistades', 'FriendshipController@getIndex');

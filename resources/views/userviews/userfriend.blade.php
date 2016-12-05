@@ -7,17 +7,45 @@
 <div class="container">
 <div class="row">
   <div class="col-sm-3 fixed-top bkg-white brd-top pdtop20">
-      @if (is_object(\Auth::user()->image))
-        <img src="/img/{{\Auth::user()->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
+      @if (is_object($recipient->image))
+        <img src="/img/{{$recipient->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
       @endif
       <div class="pdtop20">
-        <p class="font-size-large"><a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a></p>
+        <p class="font-size-large"><a href="/home/{{Auth::user()->id }}">{{$recipient->name}}</a></p>
       </div>
     <div class="mgtop20">
+      @if ($user->id != $recipient->id )
+        <form class="" action="{{$user->befriend($recipient)}}" method="post">
+          <button type="button" name="addFriend">Agregar Amigo!</button>
+        </form>
+      @endif
+
+        <p>
+          @php
+            $pendientes = $user->hasFriendRequestFrom($recipient)
+          @endphp
+        
+          Solicitudes de amistad pendientes: {{$pendientes}}
+          {{-- @php
+            $amistades = $user->getPendingFriendships();
+          @endphp
+
+          @foreach ($amistades as $amistad)
+            @if ($amistad->recipient->id === Auth::user()->id )
+              <p>
+                {{$amistad->sender->name}}
+              </p>
+              <form class="" action="{{$amistad->sender->acceptFriendRequest($recipient)}}" method="post">
+                <button type="button" name="status" value="1">Aceptar!</button>
+              </form>
+          @endif
+          @endforeach --}}
+
+
+
+
         <div class="row margin-btn-10">
-          <p>
-            Solicitudes de amistad pendientes: {{$user->hasFriendRequestFrom($recipient)}}
-          </p>
+          <a href=""></a>
           <div class="col-sm-2">
             <span class="icon"><i class="fa fa-comments"></i></span>
           </div>
@@ -31,6 +59,17 @@
           </div>
           <div class="col-sm-10">
             <label for="indumentaria"><a href="#"> Amigos</a></label>
+            {{-- @php
+              $amigos = $user->getAcceptedFriendships()
+            @endphp
+            @foreach ($amigos as $amigo)
+              @if ($amigo->status === 1 )
+                <p>
+                  <a href="/{{$amigo->sender->id}}">{{$amigo->sender->name}}</a>
+                </p>
+              @endif
+
+            @endforeach --}}
           </div>
         </div>
         <div class="row margin-btn-10">

@@ -39,6 +39,11 @@ class User extends Authenticatable
       return $this->hasMany('Post' , 'user_id');
     }
 
+    public function friendships() {
+      return $this->hasMany('Post' , 'user_id');
+    }
+
+
 
 
 }
