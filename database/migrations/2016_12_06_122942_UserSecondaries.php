@@ -16,7 +16,7 @@ class UserSecondaries extends Migration
       Schema::create('user_secondaries', function (Blueprint $table) {
         $table->increments('id');
         $table->integer('hijos');
-        $table->integer('grupos_preferidos');
+        $table->integer('group_id')->unsigned();
         $table->string('obrasocial');
         $table->integer('doctor_id')->unsigned();
         $table->integer('user_id')->unsigned();

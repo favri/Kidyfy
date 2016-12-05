@@ -4,6 +4,7 @@
 @endsection
 
 @section('content')
+
 <div class="container">
 <div class="row">
   <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top" onscroll="myFunction()">
@@ -61,10 +62,10 @@
         <h4><a href="/grupo/{{Auth::user()->id }}">Grupos Favoritos:</a></h4>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
-            <span class="icon"><i class=""></i></span>
+            <span class="icon"><i class="{{$user->UserSecondaries->group->icon}}"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="indumentaria"><a href="/indumentaria/{{Auth::user()->id }}"> Indumentaria</a></label>
+            <label for="indumentaria"><a href="/{{$user->UserSecondaries->group->group_name}}/{{Auth::user()->id }}"> {{$user->UserSecondaries->group->group_name}}</a></label>
           </div>
         </div>
 

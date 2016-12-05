@@ -67,6 +67,8 @@
       <div class="row">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white brd-top">
+              <span class="icon-post pull-right"><i class="fa fa-graduation-cap"></i></span>
+              <h3>Colegios</h3>
               <p class="font-size-medium">¿Listo para Kidyar {{\Auth::user()->name}}?</p>
                <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
 

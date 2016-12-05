@@ -44,7 +44,7 @@ $factory->define(App\UserSecondarie::class, function (Faker\Generator $faker) {
     return [
         'hijos' => $faker->numberBetween($min = 0, $max = 5),
         'obrasocial' => $faker->randomElement($array = array ('OSDE','MEDICUS','GALENO','SWISS MEDICAL','ACCORD SALUD','ITALIANO')),
-        'grupos_preferidos' => $faker->numberBetween($min = 2, $max = 6),
+        'group_id' => $faker->numberBetween($min = 2, $max = 6),
         'doctor_id' => $faker->unique()->randomFloat($nbMaxDecimals = 0, $min = 1, $max = 25),
         'user_id' => $faker->unique()->numberBetween($min = 1, $max = 25),
         'remember_token' => str_random(10),
