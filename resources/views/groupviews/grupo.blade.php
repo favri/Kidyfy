@@ -16,14 +16,11 @@
           </div>
         <div class="mgtop20">
             <div class="row margin-btn-10">
-              {{-- <p>
-                Solicitudes de amistad pendientes: {{$user->hasFriendRequestFrom($recipient)}}
-              </p> --}}
               <div class="col-sm-2">
                 <span class="icon"><i class="fa fa-comments"></i></span>
               </div>
               <div class="col-sm-10">
-                <label for="indumentaria"><a href="#"> Mensajes</a></label>
+                <label for="mensajes"><a href="#"> Mensajes</a></label>
               </div>
             </div>
             <div class="row margin-btn-10">
@@ -31,7 +28,7 @@
                 <span class="icon"><i class="fa fa-users"></i></span>
               </div>
               <div class="col-sm-10">
-                <label for="indumentaria"><a href="#"> Amigos</a></label>
+                <label for="amigos"><a href="#">Amigos</a></label>
               </div>
             </div>
             <div class="row margin-btn-10">
@@ -39,7 +36,7 @@
                 <span class="icon"><i class="fa fa-picture-o"></i></span>
               </div>
               <div class="col-sm-10">
-                <label for="Colegios"><a href="#"> Fotos</a></label>
+                <label for="fotos"><a href="#"> Fotos</a></label>
               </div>
             </div>
             <div class="row margin-btn-10">
@@ -47,16 +44,16 @@
                 <span class="icon"><i class="fa fa-calendar-check-o"></i></span>
               </div>
               <div class="col-sm-10">
-                <label for="colonias"><a href="#"> Eventos</a></label>
+                <label for="eventos"><a href="#"> Eventos</a></label>
               </div>
             </div>
-            <h4><a href="#">Hijos:</a></h4>
+            <h4><a href="#">Hijos</a></h4>
             <div class="row margin-btn-10">
               <div class="col-sm-2">
                 <span class="icon"><i class="fa fa-child"></i></span>
               </div>
               <div class="col-sm-10">
-                <label for="indumentaria">{{$user->UserSecondaries->hijos}}</label>
+                <label for="hijos">{{$user->UserSecondaries->hijos}}</label>
               </div>
             </div>
             <h4><a href="/grupo/{{Auth::user()->id }}">Grupos Favoritos:</a></h4>
@@ -65,7 +62,7 @@
                 <span class="icon"><i class="{{$user->UserSecondaries->group->icon}}"></i></span>
               </div>
               <div class="col-sm-10">
-                <label for="indumentaria"><a href="/{{$user->UserSecondaries->group->group_name}}/{{Auth::user()->id }}"> {{$user->UserSecondaries->group->group_name}}</a></label>
+                <label for="grupo_favorito" class="capitalize">{{$user->UserSecondaries->group->group_name}}</label>
               </div>
             </div>
 
@@ -75,7 +72,7 @@
                 <span class="icon"><i class="fa fa-id-card"></i></span>
               </div>
               <div class="col-sm-10">
-                <label for="indumentaria">{{$user->UserSecondaries->obrasocial}}</label>
+                <label for="obra_social">{{$user->UserSecondaries->obrasocial}}</label>
               </div>
             </div>
             <h4><a href="#">Médicos Recomendados:</a></h4>
@@ -84,7 +81,7 @@
                 <span class="icon"><i class="fa fa-heartbeat"></i></span>
               </div>
               <div class="col-sm-10">
-                <label for="indumentaria"><a href="#"> Dr.Perez</a></label>
+                <label for="doctor"><a href="/doctores/{{$user->id}}">{{$user->UserSecondaries->doctor->name}}</a></label>
               </div>
             </div>
         </div>
