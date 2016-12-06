@@ -460,5 +460,20 @@ textarea{
   float: right;
 }
 .imgpost {
-  
+  width: 20%;
+  margin: 0 2.5% 20px;
+  /*border: dotted 1px red;*/
+  position: relative;
+  float: left;
+  padding-top: 15%;
+  overflow: hidden;
+}
+
+.imgpost img{
+  position: absolute;
+  width: auto;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
