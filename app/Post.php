@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Image;
+use App\ImagesPost;
 use App\Group;
 
 class Post extends Model
@@ -20,6 +21,11 @@ class Post extends Model
   public function user()
   {
     return $this->belongsTo('App\User' , 'user_id') ;
+  }
+
+  public function imagespost()
+  {
+    return $this->hasMany('App\ImagesPost');
   }
 
   public function group()
