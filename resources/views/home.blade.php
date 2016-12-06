@@ -76,6 +76,7 @@
              <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyarte?"> </textarea>
              <input type="file" name="postfile" size="2mb" value="" style="display:inline-block">
              <input type="number" name="group_id" value="1" hidden>
+             <input type="file" name="file" multiple>
              <button type="submit" class="btn btn-primary">Postear</button>
            </form>
 
@@ -99,6 +100,19 @@
                 <span class="icon-post pull-right"><a href="{{$post->group->group_name}}/{{\Auth::user()->id}}"><i class="{{$post->group->icon}}"></i></a></span>
               </div>
             </div>
+            <div class="row">
+              <div class="col-sm-12" style="padding-right:0px;">
+                @forelse($post->imagespost as $image)
+                  <div class="col-md-6">
+                    <img src="/imp/posteos/{{ $image->src }}" alt="{{ $post->name }}" class="img-responsive" />
+                  </div>
+                @empty
+                  <h5>
+                    No hay imágenes cargadas.
+                  </h5>
+                @endforelse
+              </div>
+            </div>
           </div>
 
         @else
@@ -116,10 +130,30 @@
                 <span class="icon-post pull-right"><a href="#"><i class="{{$post->group->icon}}"></i></a></span>
               </div>
             </div>
+            <div class="row">
+              <div class="col-sm-12" style="padding-right:0px;">
+                @forelse($post->imagespost as $image)
+                  <div class="col-md-6">
+                    <img src="/imp/posteos/{{ $image->src }}" alt="{{ $post->name }}" class="img-responsive" />
+                  </div>
+                @empty
+                  <h5>
+                    No hay imágenes cargadas.
+                  </h5>
+                @endforelse
+              </div>
+            </div>
           </div>
+
+
         @endif
+
       @endforeach
     </div>
+
+
+
+
 
   </div>
   <div id="rcol" class="col-sm-2 bkg-white brd-top fixed-top">
