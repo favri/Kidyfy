@@ -24,12 +24,12 @@ class CreateUsersTable extends Migration
         $table->timestamps();
       });
 
-      Schema::create('images', function (Blueprint $table) {
-        $table->increments('id');
-        $table->string('src');
-        $table->timestamps();
-        $table->integer('user_id')->unsigned();
-      });
+      // Schema::create('images', function (Blueprint $table) {
+      //   $table->increments('id');
+      //   $table->string('src');
+      //   $table->timestamps();
+      //   $table->integer('user_id')->unsigned();
+      // });
 
     }
 
@@ -41,6 +41,6 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::drop('users');
-        Schema::drop('images');
+        // Schema::drop('images');
     }
 }

@@ -22,7 +22,7 @@ class UserSecondarie extends Model
    * @var array
    */
   protected $fillable = [
-      'hijos','grupos_preferidos','obrasocial','doctor_id','user_id'
+      'hijos','grupo_id','obrasocial','doctor_id','user_id'
   ];
 
   /**
@@ -40,6 +40,16 @@ class UserSecondarie extends Model
 
   public function post() {
     return $this->hasMany('Post' , 'user_id');
+  }
+
+  public function group()
+  {
+    return $this->belongsTo('App\Group') ;
+  }
+
+  public function doctor()
+  {
+    return $this->belongsTo('App\Doctor') ;
   }
 
 }

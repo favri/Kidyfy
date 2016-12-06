@@ -17,7 +17,7 @@
        * @var array
        */
       protected $fillable = [
-          'name','email', 'password','fecha_de_nacimiento','genero'
+          'name','email', 'password','fecha_de_nacimiento','genero','especialidad','obrasocial'
       ];
 
       /**
@@ -39,6 +39,10 @@
 
       public function post() {
         return $this->hasMany('Post' , 'user_id');
+      }
+
+      public function UserSecondaries() {
+        return $this->hasOne('App\UserSecondarie');
       }
 
       // public function friendships() {

@@ -1,11 +1,9 @@
 @extends('layouts.app')
 @section('titulo')
-  Grupos
+  Doctores - GATO
 @endsection
-
 @section('content')
   <div class="container">
-  <div class="row">
     <div class="row">
       <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top" onscroll="myFunction()">
         <div class="pdtop20">
@@ -81,7 +79,7 @@
                 <span class="icon"><i class="fa fa-heartbeat"></i></span>
               </div>
               <div class="col-sm-10">
-                <label for="doctor"><a href="/doctores/{{$user->id}}">{{$user->UserSecondaries->doctor->name}}</a></label>
+                <label for="doctor"><a href="/doctores/{{$user->id }}">{{$user->UserSecondaries->doctor->name}}</a></label>
               </div>
             </div>
         </div>
@@ -93,61 +91,29 @@
       </div>
     <div id="ccol" class="col-sm-7 fixed-top">
       <div class="row">
-          <a href="/establecimientos/{{Auth::user()->id }}">
-            <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-establecimientos">
-              <span class="icon pull-left icon-group"><i class="fa fa-hospital-o"></i></span>
-            <div class="group-box">
-              <h3>Establecimientos</h3>
-              <p>
-                Dónde cuidar a nuestros hijos.
-              </p>
-            </div>
-          </div>
-          </a>
-          <a href="/medicos/{{Auth::user()->id }}">
-          <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-medicos">
-            <span class="icon pull-left icon-group"><i class="fa fa-stethoscope"></i></span>
-            <div class="group-box">
-              <h3>Médicos</h3>
-              <p>
-                Un médico es una garantía
-              </p>
-            </div>
-          </div>
-          </a>
-          <a href="/indumentaria/{{Auth::user()->id }}">
-          <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-indumentaria">
-            <span class="icon pull-left icon-group"><i class="fa fa-briefcase"></i></span>
-            <div class="group-box">
-              <h3>Indumentaria</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-          </a>
-          <a href="/colegios/{{Auth::user()->id }}">
-          <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-colegios">
-            <span class="icon pull-left icon-group"><i class="fa fa-graduation-cap"></i></span>
-            <div class="group-box">
-              <h3>Colegios</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-          </a>
-          <a href="/colonias/{{Auth::user()->id }}">
-          <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-colonias">
-            <span class="icon pull-left icon-group img-circle"><i class="fa fa-life-ring"></i></span>
-            <div class="group-box">
-              <h3>Colonias</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-          </a>
+        <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
+          <table>
+            <tr>
+              <th>Nombre</th>
+              <th>Especialidad</th>
+              <th>Obra Social</th>
+            </tr>
+            @foreach ($doctors as $doctor)
+              <tr>
+                <td>
+                  {{$doctor->name}}
+                </td>
+                <td>
+                  {{$doctor->especialidad}}
+                </td>
+                <td>
+                  {{$doctor->obrasocial}}
+                </td>
+              </tr>
+            @endforeach
+          </table>
+
+        </div>
       </div>
     </div>
 
@@ -179,6 +145,6 @@
     </div>
   </div>
   </div>
-  <!-- Finish MainContainer -->
+
 @endsection
 @extends('partials.footerkdf')

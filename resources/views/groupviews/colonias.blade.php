@@ -11,7 +11,7 @@
           @if (is_object(\Auth::user()->image))
             <img src="/img/{{\Auth::user()->image->src}}" class="img-square" height="20" width="20" alt="Avatar">
           @endif
-            <a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a>
+            <a href="/{{Auth::user()->id }}">{{\Auth::user()->name}}</a>
         </p>
       </div>
       <div class="mgtop20 ">
@@ -67,6 +67,9 @@
       <div class="row">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white brd-top">
+
+              <span class="icon-post pull-right"><i class="fa fa-life-ring"></i></span><h3>Colonias</h3>
+
               <p class="font-size-medium">¿Listo para Kidyar {{\Auth::user()->name}}?</p>
                <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
 
@@ -87,7 +90,7 @@
             <div class="row">
               <div class="col-sm-12">
                 <p class="font-size-medium">
-                  {{ $post->user->name }} el {{$post->created_at}}
+                  <a href="/{{$post->user->id}}">{{ $post->user->name }} </a>el {{$post->created_at}}
                 </p>
               </div>
             </div>

@@ -117,6 +117,10 @@
   margin-right: 25px;
 }
 
+.capitalize{
+  text-transform: capitalize;
+}
+
 .navbar{
   min-height: 20px;
 }
@@ -344,13 +348,33 @@ textarea{
 }
 
 .group-box{
-  background: linear-gradient(to right, #ffffff , rgba(250, 251, 251, 0));
+  /*background: linear-gradient(to right, #ffffff , rgba(250, 251, 251, 0));*/
+  color: #ffffff;
+  text-shadow: 0px 1px #d2cdcd;
   margin: 50px -20px -20px;
   padding: 10px 15px;
 }
+
+.group-box i{
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.group-box p{
+  text-shadow: none;
+}
+
 .group-box h3{
   margin-top: 0;
 }
+
+.icon-group{
+  color: #ffffff;
+  font-size: 2.3em;
+  padding-top: 2px;
+  margin-left: -5px;
+}
+
 .img-medicos{
   background-image: url(/img/grupos/GrupoMedicos.jpg);
   background-position: right center;
