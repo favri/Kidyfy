@@ -16,24 +16,27 @@ class PostsController extends Controller
         'user_id' => Auth::user()->id,
         'group_id' => $request['group_id'],
         'visitor' => $request->ip,
-
     ]);
     $posts = Post::orderBy('created_at', 'desc')->get();
 
-    //var_dump($post);
-    // $this->imagespost($post->id);
-
-    if ($request->file) {
+    if ($request->postfile) {
       //guardo el archivo
-      $file = $request->file('file');
-      $ext = $file->extension();
-      $name = uniqid();
-      $file->storeAs('posts/post-'.$post->id, $name.'.'.$ext);
 
-      //persiste en base
-      $imagespost = new \App\ImagesPost(['src' => 'posts/post-'.$post->id.'/'.$name.'.'.$ext]);
-      $post->imagespost()->save($imagespost);
-      $post->imagespost($request->input('file'),$request->post_id);
+      foreach ($request->postfile as $key => $postfile) {
+        $file = $postfile;
+        $ext = $file->extension();
+        $name = uniqid();
+        $file->storeAs('posts/post-'.$post->id, $name.'.'.$ext);
+
+        //persiste en base
+        $imagespost = new \App\ImagesPost(['src' => 'posts/post-'.$post->id.'/'.$name.'.'.$ext]);
+        $post->imagespost()->save($imagespost);
+        $post->imagespost($postfile,$request->post_id);
+      }
+
+
+
+
   }
 
     return view('home', compact('posts'));
