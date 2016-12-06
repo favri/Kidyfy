@@ -98,8 +98,9 @@
       <div class="row">
           <a href="/establecimientos/{{Auth::user()->id }}">
             <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-establecimientos">
+              <span class="icon pull-left icon-group"><i class="fa fa-hospital-o"></i></span>
             <div class="group-box">
-              <span class="icon pull-left"><i class="fa fa-hospital-o"></i></span><h3>Establecimientos</h3>
+              <h3>Establecimientos</h3>
               <p>
                 Dónde cuidar a nuestros hijos.
               </p>
@@ -108,8 +109,9 @@
           </a>
           <a href="/medicos/{{Auth::user()->id }}">
           <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-medicos">
+            <span class="icon pull-left icon-group"><i class="fa fa-stethoscope"></i></span>
             <div class="group-box">
-              <span class="icon pull-left"><i class="fa fa-stethoscope"></i></span><h3>Médicos</h3>
+              <h3>Médicos</h3>
               <p>
                 Un médico es una garantía
               </p>
@@ -118,8 +120,9 @@
           </a>
           <a href="/indumentaria/{{Auth::user()->id }}">
           <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-indumentaria">
+            <span class="icon pull-left icon-group"><i class="fa fa-briefcase"></i></span>
             <div class="group-box">
-              <span class="icon pull-left"><i class="fa fa-briefcase"></i></span><h3>Indumentaria</h3>
+              <h3>Indumentaria</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
@@ -128,8 +131,9 @@
           </a>
           <a href="/colegios/{{Auth::user()->id }}">
           <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-colegios">
+            <span class="icon pull-left icon-group"><i class="fa fa-graduation-cap"></i></span>
             <div class="group-box">
-              <span class="icon pull-left"><i class="fa fa-graduation-cap"></i></span><h3>Colegios</h3>
+              <h3>Colegios</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
@@ -138,8 +142,9 @@
           </a>
           <a href="/colonias/{{Auth::user()->id }}">
           <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white img-colonias">
+            <span class="icon pull-left icon-group img-circle"><i class="fa fa-life-ring"></i></span>
             <div class="group-box">
-              <span class="icon pull-left"><i class="fa fa-life-ring"></i></span><h3>Colonias</h3>
+              <h3>Colonias</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
