@@ -74,9 +74,8 @@
            <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
              {{ csrf_field() }}
              <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyarte?"> </textarea>
-             <input type="file" name="postfile" size="2mb" value="" style="display:inline-block">
+             <input type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" multiple>
              <input type="number" name="group_id" value="1" hidden>
-             <input type="file" name="file" multiple>
              <button type="submit" class="btn btn-primary">Postear</button>
            </form>
 
@@ -104,12 +103,12 @@
               <div class="col-sm-12" style="padding-right:0px;">
                 @forelse($post->imagespost as $image)
                   <div class="col-md-6">
-                    <img src="/imp/posteos/{{ $image->src }}" alt="{{ $post->name }}" class="img-responsive" />
+                    <img src="/img/{{ $image->src }}" alt="{{ $post->name }}" class="img-responsive imgpost" />
                   </div>
                 @empty
-                  <h5>
+                  <h6>
                     No hay imágenes cargadas.
-                  </h5>
+                  </h6>
                 @endforelse
               </div>
             </div>
@@ -134,7 +133,7 @@
               <div class="col-sm-12" style="padding-right:0px;">
                 @forelse($post->imagespost as $image)
                   <div class="col-md-6">
-                    <img src="/imp/posteos/{{ $image->src }}" alt="{{ $post->name }}" class="img-responsive" />
+                    <img src="/img/{{ $image->src }}" alt="{{ $post->name }}" class="img-responsive" />
                   </div>
                 @empty
                   <h5>
