@@ -25,7 +25,6 @@ Route::get('/', function () {
 
 });
 
-
 Auth::routes();
 
 Route::post('/home','PostsController@store');
@@ -35,12 +34,9 @@ Route::match(['post', 'patch'],'registro/{id}','RegisterController@actualizar');
 // Route::get('register/{id}/edit','Auth\RegisterController@edit');
 // Route::patch('register/{id}','Auth\RegisterController@update');
 
-
 Route::get('/home', 'HomeController@index');
 
 Route::get('/home/{id}' , 'HomeController@view');
-
-Route::get('/{id}' , 'UserController@view');
 
 Route::get('faq', 'FaqController@faqs');
 
@@ -64,3 +60,4 @@ Route::post('contact','ContactoController@store');
 
 Route::get('contact','ContactoController@form');
 
+Route::get('/{id}' , 'UserController@view');

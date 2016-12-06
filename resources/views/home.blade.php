@@ -155,7 +155,7 @@
 
 
   </div>
-  <div id="rcol" class="col-sm-2 bkg-white brd-top fixed-top">
+  <div id="rcol" class="col-sm-2 bkg-white brd-top fixed-top margin-btn-60">
     <div class="pdtop20">
       <p>
         <label for="AD1">
