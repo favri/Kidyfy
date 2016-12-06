@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('titulo')
-  Doctores - GATO
+  Doctores - {{$user->name}}
 @endsection
 @section('content')
   <div class="container">

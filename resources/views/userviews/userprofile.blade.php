@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('titulo')
-  Mi perfil - {{Auth::user()->name }}
+  Mi perfil - {{$user->name}}
 @endsection
 
 @section('content')
