@@ -171,7 +171,7 @@
               </div>
             </div>
             @include('partials.showimage')
-            <span class="icon-post pull-right" style="margin-right:-10;margin-top:10;"><a href="#"><i class="{{$post->group->icon}}"></i></a></span>
+            <span class="icon-post pull-right" style="margin-right:-10;"><a href="#"><i class="{{$post->group->icon}}"></i></a></span>
           </div>
         @endif
       @endforeach

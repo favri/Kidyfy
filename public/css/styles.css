@@ -464,7 +464,7 @@ textarea{
   margin: 0 2.5% 20px;
   /*border: dotted 1px red;*/
   position: relative;
-  float: left;
+  float: right;
   padding-top: 15%;
   overflow: hidden;
 }
@@ -473,9 +473,9 @@ textarea{
   position: absolute;
   width: auto;
   height: 100%;
-  left: 50%;
+  right: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
 }
 
 #myInput {

@@ -122,7 +122,7 @@
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
           <div class="table-responsive">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por obra social">
             <table id="myTable" class="table table-hover">
               <thead>
               <tr>
@@ -136,10 +136,10 @@
                   <td>
                     {{$doctor->name}}
                   </td>
-                  <td style="padding-left:20;">
+                  <td>
                     {{$doctor->especialidad}}
                   </td>
-                  <td style="padding-left:20;">
+                  <td>
                     {{$doctor->obrasocial}}
                   </td>
                 </tr>

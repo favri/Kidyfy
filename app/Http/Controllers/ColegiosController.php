@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Post;
 use App\Group;
+use Auth;
 
 class ColegiosController extends Controller
 {
@@ -24,7 +25,7 @@ class ColegiosController extends Controller
         'group_id' => $request['group_id'],
         'visitor' => $request->ip,
     ]);
-    $posts = Post::orderBy('created_at', 'desc')->get();
+    $posts = Post::where('group_id', '5')->orderBy('created_at', 'desc')->get();
 
     if ($request->postfile) {
       //guardo el archivo

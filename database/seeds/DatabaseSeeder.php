@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
       $user = factory(App\User::class,25)->create();
       $posts =  factory(App\Post::class, 250)->create();
       $doctor = factory(App\Doctor::class,25)->create();
-      $secondarie = factory(App\UserSecondarie::class,25)->create();
+      $secondarie = factory(App\UserSecondarie::class,50)->create();
 
     }
 }

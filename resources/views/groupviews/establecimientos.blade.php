@@ -127,10 +127,10 @@
               <p class="font-size-medium">¿Listo para Kidyar {{\Auth::user()->name}}?</p>
                <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
 
-               <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
+               <form class="" method="post" action="/establecimientos/{{\Auth::user()->id}}" enctype="multipart/form-data">
                  {{ csrf_field() }}
                  <textarea name="post_text" class="postarea margin-btn-10" placeholder="¿Listo para Kidyarte?"> </textarea>
-                 <input type="file" name="postfile" size="2mb" value="" style="display:inline-block">
+                 <input type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" multiple>
                  <input type="number" name="group_id" value="3" hidden>
                  <button type="submit" class="btn btn-primary pull-right">Postear</button>
                </form>
@@ -151,9 +151,10 @@
               <div class="row">
                 <div class="col-sm-12" style="padding-right:0px;">
                   <p class="font-size-large"><img src="/img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
-                  <span class="icon-post pull-right"><i class="{{$post->group->icon}}"></i></span>
                 </div>
               </div>
+              @include('partials.showimage')
+              <span class="icon-post pull-right"><i class="{{$post->group->icon}}"></i></span>
             </div>
           @endforeach
           </div>
