@@ -81,7 +81,7 @@
             <span class="icon"><i class="fa fa-heartbeat"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="doctor"><a href="#">{{$user->UserSecondaries->doctor->name}}</a></label>
+            <label for="doctor"><a href="/doctores/{{$user->id}}">{{$user->UserSecondaries->doctor->name}}</a></label>
           </div>
         </div>
     </div>

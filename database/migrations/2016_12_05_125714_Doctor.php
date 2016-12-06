@@ -20,6 +20,8 @@ class Doctor extends Migration
          $table->string('password');
          $table->date('fecha_de_nacimiento');
          $table->enum('genero', ['F','M']);
+         $table->string('especialidad');
+         $table->string('obrasocial');
          $table->rememberToken();
          $table->timestamps();
        });

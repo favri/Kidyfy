@@ -11,7 +11,7 @@
           @if (is_object(\Auth::user()->image))
             <img src="/img/{{\Auth::user()->image->src}}" class="img-square" height="20" width="20" alt="Avatar">
           @endif
-            <a href="/home/{{Auth::user()->id }}">{{\Auth::user()->name}}</a>
+            <a href="/{{Auth::user()->id }}">{{\Auth::user()->name}}</a>
         </p>
       </div>
       <div class="mgtop20 ">
@@ -89,7 +89,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <p class="font-size-medium">
-                    {{ $post->user->name }} el {{$post->created_at}}
+                    <a href="/{{$post->user->id}}">{{ $post->user->name }} </a>el {{$post->created_at}}
                   </p>
                 </div>
               </div>

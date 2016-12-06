@@ -18,32 +18,32 @@ class DatabaseSeeder extends Seeder
         \DB::table('groups')->insert([
           [
             'id' => '1',
-            'group_name' => 'General',
+            'group_name' => 'general',
             'icon' => 'fa fa-globe'
           ],
           [
             'id' => '2',
-            'group_name' => 'Medicos',
+            'group_name' => 'medicos',
             'icon' => 'fa fa-stethoscope'
           ],
           [
             'id' => '3',
-            'group_name' => 'Establecimientos',
+            'group_name' => 'establecimientos',
             'icon' => 'fa fa-hospital-o'
           ],
           [
             'id' => '4',
-            'group_name' => 'Indumentaria',
+            'group_name' => 'indumentaria',
             'icon' => 'fa fa-briefcase'
           ],
           [
             'id' => '5',
-            'group_name' => 'Colegios',
+            'group_name' => 'colegios',
             'icon' => 'fa fa-graduation-cap'
           ],
           [
             'id' => '6',
-            'group_name' => 'Colonias',
+            'group_name' => 'colonias',
             'icon' => 'fa fa-life-ring'
           ],
 

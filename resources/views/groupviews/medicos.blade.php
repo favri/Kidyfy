@@ -88,7 +88,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <p class="font-size-medium">
-                    {{ $post->user->name }} el {{$post->created_at}}
+                    <a href="/{{$post->user->id}}">{{ $post->user->name }} </a>el {{$post->created_at}}
                   </p>
                 </div>
               </div>
