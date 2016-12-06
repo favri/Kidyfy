@@ -15,20 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/stylesfaq.css">
-    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-
-    <script type="text/javascript" src="/js/jquery.fancybox.pack.js"></script>
-
-    <script>
-
-      $( document ).ready(function() {
-          $( "a" ).click(function( event ) {
-              alert( "The link will no longer take you to jquery.com" );
-              event.preventDefault();
-          });
-      });
-
-    </script>
+    <link rel="stylesheet" href="/css/lightbox.css"/>
 
     <!-- Scripts -->
     <script>
@@ -116,8 +103,19 @@
   <script src="/js/controlesjs.js"></script>
   <script src="/js/faq.js"></script>
   <script src="/js/main.f1062ae1.js"></script>
-  <script type="text/javascript" src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/js/lightbox-plus-jquery.js"></script>
+  <script>
+            lightbox.option({
+                'fitImagesInViewport': true,
+                'resizeDuration' : 200,
+                'wrapAround' : true,
+                'maxHeight': 500,
+            });
+        </script>
+  {{-- <script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script> --}}
   {{-- <script src="js/chat.js"></script> --}}
 </body>
 </html>

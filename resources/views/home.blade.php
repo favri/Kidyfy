@@ -58,6 +58,10 @@
           </div>
         </div>
     </div>
+    <div class="mgtop20">
+      <h4><a href="doctores/{{Auth::user()->id}}">Doctores</a></h4>
+
+    </div>
     <div class="alert alert-info fade in">
       <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
       <a href="{{url ('/home/grupo')}}"><p><strong>¿Tienes sugerencias?</strong></p>

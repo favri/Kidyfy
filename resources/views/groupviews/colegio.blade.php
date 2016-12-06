@@ -75,8 +75,8 @@
                <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
                  {{ csrf_field() }}
                  <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyarte?"> </textarea>
-                 <input type="file" name="postfile" size="2mb" value="" style="display:inline-block">
-                 <input type="number" name="group_id" value="5" hidden>
+                 <input type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" multiple>
+                 <input type="number" name="group_id" value="1" hidden>
                  <button type="submit" class="btn btn-primary">Postear</button>
                </form>
 
