@@ -17,6 +17,11 @@
                             <div class="col-md-6">
                                 <input id="name_contact" type="text" class="form-control" name="name_contact" required autofocus>
                             </div>
+                            <label for="email" class="col-md-4 control-label">Email:</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" required autofocus>
+                            </div>
                             <label for="subject_contact" class="col-md-4 control-label">Asunto:</label>
 
                             <div class="col-md-6">

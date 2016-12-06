@@ -19,6 +19,7 @@ class ContactoController extends Controller
 
      Contact::create([
           'name_contact' => $request['name_contact'],
+          'email' => $request['email'],
           'subject_contact' => $request['subject_contact'],
           'contact_text' => $request['contact_text'],
       ]);

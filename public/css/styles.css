@@ -16,7 +16,6 @@
 .font-size-14{
   font-size: 14px;
 }
-
 .font-size-medium{
   font-size: 1.3em;
 }
@@ -71,6 +70,9 @@
 }
 .margin-btn-10{
   margin-bottom: 10px;
+}
+.margin-btn-60{
+  margin-bottom:60px;
 }
 
 .dropdown-menu > li > a:hover{

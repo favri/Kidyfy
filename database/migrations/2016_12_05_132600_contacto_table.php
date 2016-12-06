@@ -9,9 +9,11 @@ class ContactoTable extends Migration
   public function up(){
 
       Schema::create('contacts', function (Blueprint $table) {
-        $table->string('name_contact')->unsigned();
-        $table->string('subject_contact')->unsigned();
-        $table->string('contact_text')->unsigned();
+        $table->string('name_contact');
+        $table->string('email');
+        $table->string('subject_contact');
+        $table->string('contact_text');
+        $table->rememberToken();
         $table->timestamps();
     });
   }
