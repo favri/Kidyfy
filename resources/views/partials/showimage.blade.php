@@ -7,9 +7,6 @@
         </a>
       </div>
     @empty
-      <h5>
-        No hay imágenes cargadas.
-      </h5>
-    @endforelse
+  @endforelse
   </div>
 </div>

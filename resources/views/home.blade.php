@@ -77,10 +77,10 @@
 
            <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
              {{ csrf_field() }}
-             <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyarte?"> </textarea>
+             <textarea name="post_text" class="postarea margin-btn-10" placeholder="¿Listo para Kidyarte?"> </textarea>
              <input type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" multiple>
              <input type="number" name="group_id" value="1" hidden>
-             <button type="submit" class="btn btn-primary">Postear</button>
+             <button type="submit" class="btn btn-primary pull-right">Postear</button>
            </form>
 
         </div>
@@ -100,12 +100,11 @@
             <div class="row">
               <div class="col-sm-12" style="padding-right:0px;">
                 <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
-                <span class="icon-post pull-right"><a href="{{$post->group->group_name}}/{{\Auth::user()->id}}"><i class="{{$post->group->icon}}"></i></a></span>
               </div>
             </div>
             @include('partials.showimage')
+            <span class="icon-post pull-right" style="margin-right:-10;"><a href="{{$post->group->group_name}}/{{\Auth::user()->id}}"><i class="{{$post->group->icon}}"></i></a></span>
           </div>
-
         @else
           <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
             <div class="row">
@@ -118,15 +117,12 @@
             <div class="row">
               <div class="col-sm-12" style="padding-right:0px;">
                 <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
-                <span class="icon-post pull-right"><a href="#"><i class="{{$post->group->icon}}"></i></a></span>
               </div>
             </div>
             @include('partials.showimage')
+            <span class="icon-post pull-right" style="margin-right:-10;margin-top:10;"><a href="#"><i class="{{$post->group->icon}}"></i></a></span>
           </div>
-
-
         @endif
-
       @endforeach
     </div>
 
