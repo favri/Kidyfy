@@ -5,7 +5,7 @@
 @section('content')
   <div class="container">
   <div class="row">
-    <div id="lcol" class="col-sm-3 bkg-white brd-top col-right fixed-top" onscroll="myFunction()">
+    <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top" onscroll="myFunction()">
       <div class="pdtop20">
         <p class="font-size-large">
           @if (is_object(\Auth::user()->image))
@@ -15,55 +15,110 @@
         </p>
       </div>
       <div class="mgtop20 ">
-          <h4><a href="/grupo/{{Auth::user()->id }}">Grupos</a></h4>
-          <div class="row margin-btn-10">
-            <div class="col-sm-1">
+          <h4><a href="grupo/{{Auth::user()->id }}">Grupos</a></h4>
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
               <span class="icon"><i class="fa fa-hospital-o"></i></span>
             </div>
-            <div class="col-sm-10 mgtop5">
+            <div class="col-sm-10 mgtop5 grouplist">
               <label for="establecimientos"><a href="/establecimientos/{{Auth::user()->id }}"> Establecimientos Médicos</a></label>
             </div>
           </div>
-          <div class="row margin-btn-10">
-            <div class="col-sm-1">
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
               <span class="icon"><i class="fa fa-stethoscope"></i></span>
             </div>
-            <div class="col-sm-10 mgtop5">
+            <div class="col-sm-10 mgtop5 grouplist">
               <label for="medicos"><a href="/medicos/{{Auth::user()->id }}"> Médicos</a></label>
             </div>
           </div>
-          <div class="row margin-btn-10">
-            <div class="col-sm-1">
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
               <span class="icon"><i class="fa fa-briefcase"></i></span>
             </div>
-            <div class="col-sm-10 mgtop4">
+            <div class="col-sm-10 mgtop4 grouplist">
               <label for="indumentaria"><a href="/indumentaria/{{Auth::user()->id }}"> Indumentaria</a></label>
             </div>
           </div>
-          <div class="row margin-btn-10">
-            <div class="col-sm-1">
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
               <span class="icon"><i class="fa fa-graduation-cap"></i></span>
             </div>
-            <div class="col-sm-10 mgtop4">
+            <div class="col-sm-10 mgtop4 grouplist">
               <label for="Colegios"><a href="/colegios/{{Auth::user()->id }}"> Colegios</a></label>
             </div>
           </div>
-          <div class="row margin-btn-10">
-            <div class="col-sm-1">
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
               <span class="icon"><i class="fa fa-life-ring"></i></span>
             </div>
-            <div class="col-sm-10 mgtop5">
+            <div class="col-sm-10 mgtop5 grouplist">
               <label for="colonias"><a href="/colonias/{{Auth::user()->id }}"> Colonias</a></label>
             </div>
           </div>
       </div>
+      <div class="mgtop20">
+        <h4><a href="doctores/{{Auth::user()->id}}">Doctores</a></h4>
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
+              <span class="icon"><i class="fa fa-user-md"></i></span>
+            </div>
+            <div class="col-sm-10 mgtop5 grouplist">
+              <label for="especialidades"><a href="#"> Especialidades</a></label>
+            </div>
+          </div>
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
+              <span class="icon"><i class="fa fa-id-card"></i></span>
+            </div>
+            <div class="col-sm-10 mgtop5 grouplist">
+              <label for="Obra Social"><a href="#"> Obra Social</a></label>
+            </div>
+          </div>
+      </div>
+      <div class="mgtop20">
+        <h4><a href="/doctores/{{Auth::user()->id}}">Establecimientos</a></h4>
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
+              <span class="icon"><i class="fa fa-h-square"></i></span>
+            </div>
+            <div class="col-sm-10 mgtop5 grouplist">
+              <label for="centros Medicos"><a href="#"> Centros Medicos</a></label>
+            </div>
+          </div>
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
+              <span class="icon"><i class="fa fa-puzzle-piece"></i></span>
+            </div>
+            <div class="col-sm-10 mgtop5 grouplist">
+              <label for="Jardines"><a href="#"> Jardines</a></label>
+            </div>
+          </div>
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
+              <span class="icon"><i class="fa fa-book"></i></span>
+            </div>
+            <div class="col-sm-10 mgtop5 grouplist">
+              <label for="Colegios"><a href="#"> Colegios</a></label>
+            </div>
+          </div>
+          <div class="row margin-btn-10 grouplist">
+            <div class="col-sm-1 grouplist">
+              <span class="icon"><i class="fa fa-birthday-cake"></i></span>
+            </div>
+            <div class="col-sm-10 mgtop5 grouplist">
+              <label for="Salones de fiesta"><a href="#"> Salones de fiesta</a></label>
+            </div>
+          </div>
+      </div>
+
       <div class="alert alert-info fade in">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-        <a href="{{url ('/home/grupo')}}"><p><strong>¿Tienes sugerencias?</strong></p>
+        <a href="{{url ('contact')}}"><p><strong>¿Tienes sugerencias?</strong></p>
         Estaremos felices de recibir tu opinión</a>
       </div>
     </div>
-    <div class="col-sm-7 col-sm-offset-3 fixed-top">
+  <div class="col-sm-7 fixed-top">
       <div class="row">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white brd-top">
@@ -74,10 +129,10 @@
 
                <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
                  {{ csrf_field() }}
-                 <textarea name="post_text" class="postarea" placeholder="¿Listo para Kidyarte?"> </textarea>
+                 <textarea name="post_text" class="postarea margin-btn-10" placeholder="¿Listo para Kidyarte?"> </textarea>
                  <input type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" multiple>
                  <input type="number" name="group_id" value="1" hidden>
-                 <button type="submit" class="btn btn-primary">Postear</button>
+                 <button type="submit" class="btn btn-primary pull-right">Postear</button>
                </form>
 
             </div>

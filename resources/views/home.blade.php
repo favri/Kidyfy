@@ -6,7 +6,7 @@
 @section('content')
 <div class="container">
 <div class="row">
-  <div id="lcol" class="col-sm-3 bkg-white brd-top col-right fixed-top" onscroll="myFunction()">
+  <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top" onscroll="myFunction()">
     <div class="pdtop20">
       <p class="font-size-large">
         @if (is_object(\Auth::user()->image))
@@ -60,15 +60,66 @@
     </div>
     <div class="mgtop20">
       <h4><a href="doctores/{{Auth::user()->id}}">Doctores</a></h4>
-
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
+            <span class="icon"><i class="fa fa-user-md"></i></span>
+          </div>
+          <div class="col-sm-10 mgtop5 grouplist">
+            <label for="especialidades"><a href="#"> Especialidades</a></label>
+          </div>
+        </div>
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
+            <span class="icon"><i class="fa fa-id-card"></i></span>
+          </div>
+          <div class="col-sm-10 mgtop5 grouplist">
+            <label for="Obra Social"><a href="#"> Obra Social</a></label>
+          </div>
+        </div>
     </div>
+    <div class="mgtop20">
+      <h4><a href="doctores/{{Auth::user()->id}}">Establecimientos</a></h4>
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
+            <span class="icon"><i class="fa fa-h-square"></i></span>
+          </div>
+          <div class="col-sm-10 mgtop5 grouplist">
+            <label for="centros Medicos"><a href="#"> Centros Medicos</a></label>
+          </div>
+        </div>
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
+            <span class="icon"><i class="fa fa-puzzle-piece"></i></span>
+          </div>
+          <div class="col-sm-10 mgtop5 grouplist">
+            <label for="Jardines"><a href="#"> Jardines</a></label>
+          </div>
+        </div>
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
+            <span class="icon"><i class="fa fa-book"></i></span>
+          </div>
+          <div class="col-sm-10 mgtop5 grouplist">
+            <label for="Colegios"><a href="#"> Colegios</a></label>
+          </div>
+        </div>
+        <div class="row margin-btn-10 grouplist">
+          <div class="col-sm-1 grouplist">
+            <span class="icon"><i class="fa fa-birthday-cake"></i></span>
+          </div>
+          <div class="col-sm-10 mgtop5 grouplist">
+            <label for="Salones de fiesta"><a href="#"> Salones de fiesta</a></label>
+          </div>
+        </div>
+    </div>
+
     <div class="alert alert-info fade in">
       <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-      <a href="{{url ('/home/grupo')}}"><p><strong>¿Tienes sugerencias?</strong></p>
+      <a href="{{url ('contact')}}"><p><strong>¿Tienes sugerencias?</strong></p>
       Estaremos felices de recibir tu opinión</a>
     </div>
   </div>
-  <div id="ccol" class="col-sm-7 col-sm-offset-3 fixed-top">
+  <div id="ccol" class="col-sm-7 fixed-top">
 
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1 postbox  bkg-white brd-top">

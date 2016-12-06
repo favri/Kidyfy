@@ -23,6 +23,7 @@ class ContactoController extends Controller
           'subject_contact' => $request['subject_contact'],
           'contact_text' => $request['contact_text'],
       ]);
+
       return view('contactform.contact', compact('contacts'));
     }
 }
