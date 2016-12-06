@@ -99,19 +99,7 @@
                 <span class="icon-post pull-right"><a href="{{$post->group->group_name}}/{{\Auth::user()->id}}"><i class="{{$post->group->icon}}"></i></a></span>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-12" style="padding-right:0px;">
-                @forelse($post->imagespost as $image)
-                  <div class="col-md-6">
-                    <img src="/img/{{ $image->src }}" alt="{{ $post->name }}" class="img-responsive imgpost" />
-                  </div>
-                @empty
-                  <h6>
-                    No hay imágenes cargadas.
-                  </h6>
-                @endforelse
-              </div>
-            </div>
+            @include('partials.showimage')
           </div>
 
         @else
@@ -129,19 +117,7 @@
                 <span class="icon-post pull-right"><a href="#"><i class="{{$post->group->icon}}"></i></a></span>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-12" style="padding-right:0px;">
-                @forelse($post->imagespost as $image)
-                  <div class="col-md-6">
-                    <img src="/img/{{ $image->src }}" alt="{{ $post->name }}" class="img-responsive" />
-                  </div>
-                @empty
-                  <h5>
-                    No hay imágenes cargadas.
-                  </h5>
-                @endforelse
-              </div>
-            </div>
+            @include('partials.showimage')
           </div>
 
 
