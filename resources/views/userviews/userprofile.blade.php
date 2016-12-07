@@ -135,7 +135,7 @@
       @endforeach
     </div>
   </div>
-  <div id="rcol" class="col-sm-2 bkg-white brd-top fixed-top shw-ltl-nav">
+  <div id="rcol" class="col-sm-2 bkg-white brd-top margin-btn-60 fixed-top shw-ltl-nav">
     <div class="pdtop20">
       <p>
         <label for="AD1">

@@ -125,8 +125,8 @@
 
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1 postbox  bkg-white brd-top">
-          <p class="font-size-medium">¿Listo para Kidyar {{\Auth::user()->name}}?</p>
-           <img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar">
+          <p class="font-size-medium"><img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar"> ¿Listo para Kidyar {{\Auth::user()->name}}?</p>
+
 
            <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
              {{ csrf_field() }}
@@ -187,7 +187,8 @@
         <label for="AD1">
           <a href="https://www.huggies.com.ar/">
             <img src="http://d26lpennugtm8s.cloudfront.net/stores/016/311/products/campeones-gx56-nuevo-815ee51a774242f64726ac0aa40e8f3d-1024-1024.jpg" alt="" class="img-responsive" />
-            <h4>Huggies</h4>
+            <span class=""><i class="fa fa-external-link"> Huggies</i></span>
+            <br>
             Acompañando la salud de tu bebé.
           </a>
         </label>
@@ -197,8 +198,9 @@
       <p>
         <label for="AD2">
           <a href="http://www.trinidadpalermo.com.ar/">
-            <img src="http://clinica-web.com.ar/wp-content/uploads/2016/05/sanatorio-trinidad-san-isidro.jpg" alt="" class="img-responsive" />
-            <h4>Sanatorio de la Trinidad</h4>
+            <img src="http://clinica-web.com.ar/wp-content/uploads/2016/05/sanatorio-trinidad-san-isidro.jpg" alt="" class="img-responsive" /><br>
+            <span class=""><i class="fa fa-external-link"> Sanatorio de la Trinidad</i></span>
+            <br>
             Nuestra prioridad es tu bienestar.
           </a>
         </label>
