@@ -6,7 +6,7 @@
 @section('content')
 <div class="container">
 <div class="row">
-  <div class="col-sm-3 fixed-top bkg-white brd-top pdtop20">
+  <div class="col-sm-3 fixed-top bkg-white brd-top pdtop20 shw-ltl-nav">
       @if (is_object($recipient->image))
         <img src="/img/{{$recipient->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
       @endif
@@ -24,7 +24,7 @@
           @php
             $pendientes = $user->hasFriendRequestFrom($recipient)
           @endphp
-        
+
           Solicitudes de amistad pendientes: {{$pendientes}}
           {{-- @php
             $amistades = $user->getPendingFriendships();
@@ -173,7 +173,7 @@
       @endforeach
     </div>
   </div>
-  <div class="col-sm-2 fixed-top bkg-white brd-top">
+  <div class="col-sm-2 fixed-top bkg-white brd-top shw-ltl-nav">
     <div class="pdtop20">
       <img src="img/ads/huggies.jpeg" alt="" class="img-responsive" />
     </div>

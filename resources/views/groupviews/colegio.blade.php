@@ -5,7 +5,7 @@
 @section('content')
   <div class="container">
   <div class="row">
-    <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top" onscroll="myFunction()">
+    <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top shw-ltl-nav" onscroll="myFunction()">
       <div class="pdtop20">
         <p class="font-size-large">
           @if (is_object(\Auth::user()->image))
@@ -160,7 +160,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-2 fixed-top bkg-white brd-top">
+      <div class="col-sm-2 fixed-top bkg-white brd-top shw-ltl-nav">
         <div class="pdtop20">
           <p>ADS</p>
         </div>
