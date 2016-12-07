@@ -159,7 +159,7 @@
               @include('partials.showimage')
               <span class="icon-post pull-right"><i class="{{$post->group->icon}}"></i></span>
             </div>
-          @egndforeach
+          @endforeach
           </div>
         </div>
       </div>
