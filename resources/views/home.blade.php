@@ -80,7 +80,7 @@
         </div>
     </div>
     <div class="mgtop20">
-      <h4><a href="doctores/{{Auth::user()->id}}">Establecimientos</a></h4>
+      <h4><a href="#">Establecimientos</a></h4>
         <div class="row margin-btn-10 grouplist">
           <div class="col-sm-1 grouplist">
             <span class="icon"><i class="fa fa-h-square"></i></span>
