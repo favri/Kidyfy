@@ -129,7 +129,8 @@
            <form class="" method="post" action="{{ url('home') }}" enctype="multipart/form-data">
              {{ csrf_field() }}
              <textarea name="post_text" class="postarea margin-btn-10" placeholder="¿Listo para Kidyarte?"> </textarea>
-             <input type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" multiple>
+             <input id="postfile" class="inputfile" type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" data-multiple-caption="{count} archivos seleccionados" multiple="">
+           <label for="postfile"><span>Subir Foto</span></label>
              <input type="number" name="group_id" value="1" hidden>
              <button type="submit" class="btn btn-primary pull-right">Postear</button>
            </form>

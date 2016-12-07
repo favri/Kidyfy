@@ -17,7 +17,7 @@
           </p>
         </div>
         <div class="mgtop20 ">
-            <h4><a href="grupo/{{Auth::user()->id }}">Grupos</a></h4>
+            <h4><a href="/grupo/{{Auth::user()->id }}">Grupos</a></h4>
             <div class="row margin-btn-10 grouplist">
               <div class="col-sm-1 grouplist">
                 <span class="icon"><i class="fa fa-hospital-o"></i></span>
@@ -79,7 +79,7 @@
             </div>
         </div>
         <div class="mgtop20">
-          <h4><a href="doctores/{{Auth::user()->id}}">Establecimientos</a></h4>
+          <h4><a href="#">Establecimientos</a></h4>
             <div class="row margin-btn-10 grouplist">
               <div class="col-sm-1 grouplist">
                 <span class="icon"><i class="fa fa-h-square"></i></span>
@@ -150,7 +150,7 @@
             <div class="group-box">
               <h3>Indumentaria</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                ¿Bueno, bonito y barato?
               </p>
             </div>
           </div>
@@ -161,7 +161,7 @@
             <div class="group-box">
               <h3>Colegios</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Construyendo futuro juntos
               </p>
             </div>
           </div>
@@ -172,7 +172,7 @@
             <div class="group-box">
               <h3>Colonias</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Que llegue la diversión!
               </p>
             </div>
           </div>
@@ -180,7 +180,7 @@
       </div>
     </div>
 
-    <div id="rcol" class="col-sm-2 bkg-white brd-top fixed-top">
+    <div id="rcol" class="col-sm-2 bkg-white brd-top margin-btn-60 fixed-top">
       <div class="pdtop20">
         <p>
           <label for="AD1">
