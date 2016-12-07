@@ -76,8 +76,9 @@
                         <div class="form-group{{ $errors->has('genero') ? ' has-error' : '' }}">
                             <label for="genero" class="col-md-4 control-label">Género</label>
 
-                            <div class="col-md-6">
-                                <input  type="radio"  name="genero" value="F" checked>Femenino
+                            <div class="col-sm-6 col-sm-offset-6">
+
+                                <input  type="radio"  name="genero" value="F"  checked>Femenino
                                 <input  type="radio"  name="genero" value="M" >Masculino
 
                                 @if ($errors->has('genero'))
@@ -90,9 +91,13 @@
 
                         <div class="form-group">
                           <label for="imagen" class="col-md-4 control-label">Imágen Perfil</label>
-                          <label for="imageninput" class="col-md-6 control-label">
-                            <input name="file" type="file" size="2mb">
-                          </label>
+                            <input id="file" name="file" class="inputfile" type="file" size="2mb" style="display:inline-block" data-multiple-caption="{count} archivos seleccionados" multiple="" >
+                            <label for="file" class="col-sm-offset-3"><span >Subir Foto</span></label>
+
+
+                            {{-- <input id="postfile" class="inputfile" type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" data-multiple-caption="{count} archivos seleccionados" multiple="">
+                          <label for="postfile"><span>Subir Foto</span></label>
+                          </label> --}}
 
                         </div>
 

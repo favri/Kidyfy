@@ -67,7 +67,7 @@
                         <div class="form-group{{ $errors->has('genero') ? ' has-error' : '' }}">
                             <label for="genero" class="col-md-4 control-label">Género</label>
 
-                            <div class="col-md-6">
+                            <div class="col-sm-6 col-sm-offset-6">
                                 <input  type="radio"  name="genero" value="F" checked>Femenino
                                 <input  type="radio"  name="genero" value="M" >Masculino
 
@@ -85,7 +85,8 @@
                           @if (is_object(\Auth::user()->image))
                             <img src="/img/{{\Auth::user()->image->src}}" class="img-square" height="65" width="65" alt="Avatar">
                           @endif
-                          <input name="file" type="file" size="2mb" style="display:inline-block">
+                          <input id="file" class="inputfile" name="file" type="file" size="2mb" style="display:inline-block">
+                          <label for="file" class="col-sm-offset-3"><span >Cambiar Foto</span></label>
                           </label>
                         </div>
                         {{-- <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
