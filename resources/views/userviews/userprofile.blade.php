@@ -7,7 +7,9 @@
 
 <div class="container">
 <div class="row">
-  <div id="lcol" class="col-sm-3 bkg-white brd-top fixed-top shw-ltl-nav" onscroll="myFunction()">
+
+  <div id="lcol" class="col-sm-3 bkg-white brd-top shw-ltl-nav fixed-top" onscroll="myFunction()">
+
     <div class="pdtop20">
       @if (is_object($user->image))
         <img src="/img/{{$user->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
@@ -107,11 +109,11 @@
             <div class="row">
               <div class="col-sm-12" style="padding-right:0px;">
                 <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
-                <span class="icon-post pull-right"><a href="{{$post->group->group_name}}/{{\Auth::user()->id}}"><i class="{{$post->group->icon}}"></i></a></span>
               </div>
             </div>
+            @include('partials.showimage')
+            <span class="icon-post pull-right" style="margin-right:-10;"><a href="{{$post->group->group_name}}/{{\Auth::user()->id}}"><i class="{{$post->group->icon}}"></i></a></span>
           </div>
-
         @else
           <div class="col-sm-10 col-sm-offset-1 commentbox bkg-white">
             <div class="row">
@@ -124,9 +126,10 @@
             <div class="row">
               <div class="col-sm-12" style="padding-right:0px;">
                 <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
-                <span class="icon-post pull-right"><a href="/home"><i class="{{$post->group->icon}}"></i></a></span>
               </div>
             </div>
+            @include('partials.showimage')
+            <span class="icon-post pull-right" style="margin-right:-10;"><a href="#"><i class="{{$post->group->icon}}"></i></a></span>
           </div>
         @endif
       @endforeach
