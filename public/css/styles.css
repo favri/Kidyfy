@@ -58,6 +58,12 @@
   margin-right: 5%;
   margin-top: 10px;
 }
+.txt-dec-under{
+  text-decoration: underline;
+}
+.txt-trs-upp{
+  text-transform: uppercase;
+}
 
 .shw-nav{
   box-shadow: 0px 2px 5px rgba(54, 102, 255, 0.1) ;

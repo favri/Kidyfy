@@ -49,6 +49,8 @@ Route::post('/indumentaria/{id}','IndumentariaController@store');
 
 Route::get('faq', 'FaqController@faqs');
 
+Route::get('legal', 'LegalController@legals');
+
 Route::get('/grupo/{id}', 'GrupoController@view');
 
 Route::get('/doctores/{id}', 'DoctorController@view');
