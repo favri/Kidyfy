@@ -9,6 +9,11 @@ use Auth;
 
 class PostsController extends Controller
 {
+  public function editar ($id){
+    $posts =  Post::where("user_id", "=", $id)->visibles()->get();
+    return view('edit' , compact('posts'));
+  }
+
   public function store(Request $request)
   {
     $post = Post::create([
@@ -33,10 +38,6 @@ class PostsController extends Controller
         $post->imagespost()->save($imagespost);
         $post->imagespost($postfile,$request->post_id);
       }
-
-
-
-
   }
 
     return view('home', compact('posts'));
@@ -44,7 +45,7 @@ class PostsController extends Controller
 
   public function AllPosts(Auth $user, Post $post)
   {
-      $posts = $post->where("user_id", "=", $user->id)->get();
+      $posts = $post->where("user_id", "=", $user->id)->visibles()->get();
       return view('home' , compact('posts'));
   }
 
@@ -54,8 +55,10 @@ class PostsController extends Controller
     return view('home', compact('posts'));
   }
 
-  public function destroy(Post $post)
+  public function destroy($id)
   {
+    $post = Post::find($id);
+
     foreach ($post->imagespost as $imagepost) {
         //borrar los archivo imagen
         \Storage::delete($imagepost->src);

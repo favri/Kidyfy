@@ -77,6 +77,17 @@
                               </form>
                           </li>
                           <li>
+                              <a href="/posteo/{{Auth::user()->id }}/editar"
+                                  onclick="event.preventDefault();
+                                           document.getElementById('postedit-form').submit();">
+                                  Mis Posteos
+                              </a>
+
+                              <form id="postedit-form" action="/posteo/{{Auth::user()->id }}/editar" method="GET" style="display: none;">
+                                  {{ csrf_field() }}
+                              </form>
+                          </li>
+                          <li>
                               <a href="{{ url('/logout') }}"
                                   onclick="event.preventDefault();
                                            document.getElementById('logout-form').submit();">

@@ -11,7 +11,7 @@ use App\Group;
 class Post extends Model
 {
   protected $fillable = [
-      'post_text','user_id','group_id',
+      'post_text','user_id','group_id', "visible"
   ];
 
   protected $hidden = [
@@ -31,6 +31,11 @@ class Post extends Model
   public function group()
   {
     return $this->belongsTo('App\Group','group_id') ;
+  }
+  
+  public function scopeVisibles($query)
+  {
+    $query->where('visible', 1);
   }
 
 }
