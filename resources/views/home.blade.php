@@ -206,7 +206,7 @@
         </label>
       </p>
     </div>
-    <div id="eventsapp">
+    <div id="eventsapp" class="margin-btn-60">
     </div>
   </div>
 </div>

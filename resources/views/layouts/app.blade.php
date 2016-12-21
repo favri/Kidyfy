@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/stylesfaq.css">
     <link rel="stylesheet" href="/css/lightbox.css"/>
+    <link rel="stylesheet" href="/css/justifiedGallery.min.css" />
 
     <!-- Scripts -->
     <script>
@@ -116,6 +117,7 @@
   <script src="/js/main.6054e11b.js"></script>
   <script src="/js/jquery.custom-file-input.js"></script>
   <script src="/js/jquery-v1.min"></script>
+  <script src="js/jquery.justifiedGallery.min.js"></script>
   <script src="/js/lightbox-plus-jquery.js"></script>
   <script>
             lightbox.option({
