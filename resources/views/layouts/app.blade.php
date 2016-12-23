@@ -68,25 +68,16 @@
                       <ul class="dropdown-menu" role="menu">
                           <li>
                               <a href="/registro/{{Auth::user()->id }}/editar"
-                                  onclick="event.preventDefault();
-                                           document.getElementById('useredit-form').submit();">
-                                  Editar Perfil
-                              </a>
-
-                              <form id="useredit-form" action="/registro/{{Auth::user()->id}}/editar" method="GET" style="display: none;">
+                              </a>Editar Perfil
+                                {{-- onclick="event.preventDefault();
+                                         document.getElementById('useredit-form').submit();"> --}}
+                              {{-- <form id="useredit-form" action="/registro/{{Auth::user()->id}}/editar" method="GET" style="display: none;">
                                   {{ csrf_field() }}
-                              </form>
+                              </form> --}}
                           </li>
                           <li>
                               <a href="/posteo/{{Auth::user()->id }}/editar"
-                                  onclick="event.preventDefault();
-                                           document.getElementById('postedit-form').submit();">
-                                  Mis Posteos
-                              </a>
-
-                              <form id="postedit-form" action="/posteo/{{Auth::user()->id }}/editar" method="GET" style="display: none;">
-                                  {{ csrf_field() }}
-                              </form>
+                              </a>Mis Posteos
                           </li>
                           <li>
                               <a href="{{ url('/logout') }}"
@@ -116,8 +107,8 @@
   <script src="/js/faq.js"></script>
   <script src="/js/main.6054e11b.js"></script>
   <script src="/js/jquery.custom-file-input.js"></script>
-  <script src="/js/jquery-v1.min"></script>
-  <script src="js/jquery.justifiedGallery.min.js"></script>
+  <script src="/js/jquery-v3.1.0.min.js"></script>
+
   <script src="/js/lightbox-plus-jquery.js"></script>
   <script>
             lightbox.option({
@@ -127,6 +118,8 @@
                 'maxHeight': 500,
             });
         </script>
+
+  <script src="/js/jquery.justifiedGallery.min.js"></script>
   {{-- <script
 			  src="https://code.jquery.com/jquery-3.1.1.min.js"
 			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="

@@ -1,11 +1,11 @@
-<div class="row">
-  <div class="col-sm-12" style="padding-right:0px;">
+<div class="row" style="padding-left: 15px">
+  <div class="menem col-sm-12">
     @forelse($post->imagespost as $image)
-      <div class="imgpost">
-        <a data-lightbox="{{$post->id}}" href="/img/{{ $image->src }}">
-          <img src="/img/{{ $image->src }}" alt="{{ $post->name }}" class="img-responsive" />
-        </a>
-      </div>
+      <a data-lightbox="{{$post->id}}" href="/img/{{ $image->src }}" class="imgmasonry">
+          <img src="/img/{{ $image->src }}" alt="{{ $post->name }}"/>
+      </a>
+      {{-- <div class="imgpost" >
+      </div> --}}
     @empty
   @endforelse
   </div>

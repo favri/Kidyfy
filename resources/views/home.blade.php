@@ -147,13 +147,12 @@
             <div class="row">
               <div class="col-sm-12">
                 <p class="font-size-medium">
-                  <a href="/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
+                  <img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar">
+                  <a href="/{{$post->user->id}}">{{ $post->user->name }}</a>
                 </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12" style="padding-right:0px;">
-                <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
+                <p class="font-size-medium">
+                   {{ $post->post_text }}
+                </p>
               </div>
             </div>
             @include('partials.showimage')
@@ -164,13 +163,12 @@
             <div class="row">
               <div class="col-sm-12">
                 <p class="font-size-medium">
-                  <a href="/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
+                  <img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar">
+                  <a href="/{{$post->user->id}}">{{ $post->user->name }}</a>
                 </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12" style="padding-right:0px;">
-                <p class="font-size-large"><img src="img/{{$post->user->image->src}}" class="img-square" height="40" width="40" alt="Avatar"> {{ $post->post_text }}</p>
+                <p class="font-size-medium">
+                   {{ $post->post_text }}
+                </p>
               </div>
             </div>
             @include('partials.showimage')

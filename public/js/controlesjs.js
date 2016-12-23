@@ -170,6 +170,13 @@
 //     }
 //   }
 //  };
+$(document).ready(function () {
+  $(".menem").justifiedGallery({
+    rowHeight : 150,
+    lastRow : 'justify',
+    margins : 0,
+  });
+});
 
 
 function myFunction() {
@@ -191,7 +198,7 @@ function myFunction() {
       }
     }
   }
-}
+};
 
 // function ( document, window, index )
 // {

@@ -489,6 +489,17 @@ textarea{
   transform: translate(50%, -50%);
 }
 
+/*.menem{
+}*/
+
+.menem a{
+  max-width: 550px;
+}
+.menem img{
+  width: auto;
+}
+
+
 #myInput {
     background-image: url('/images/searchicon.png'); /* Add a search icon to input */
     background-position: 2px 5px; /* Position the search icon */
