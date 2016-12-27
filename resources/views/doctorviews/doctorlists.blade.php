@@ -1,11 +1,12 @@
 @extends('layouts.app')
 @section('titulo')
-  Doctores - {{$user->name}}
+  Doctores - {{\Auth::user()->name}} 
 @endsection
+
 @section('content')
   <div class="container">
     <div class="row">
-      @include('partials.barraizquierda')
+      @include('partials.leftnavbar')
 
     <div class="col-sm-7 fixed-top margin-btn-60">
       <div class="row">

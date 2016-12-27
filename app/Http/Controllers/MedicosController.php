@@ -10,15 +10,11 @@ use Auth;
 
 class MedicosController extends Controller
 {
-  public function index()
+  
+  public function view()
   {
-    return view('groupviews.medicos');
-    }
-
-  public function view($id)
-  {
-      $user = User::find($id);
-      $posts = Post::where('group_id', '2')->orderBy('created_at', 'desc')->get();
+      // $user = User::find($id);
+      $posts = Post::where('group_id', '2')->orderBy('created_at', 'desc')->visibles()->get();
       return view('groupviews.medicos', compact('user','posts'));
   }
   public function store(Request $request)

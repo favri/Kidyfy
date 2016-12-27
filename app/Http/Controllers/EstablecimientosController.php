@@ -10,10 +10,10 @@ use Auth;
 
 class EstablecimientosController extends Controller
 {
-  public function view($id)
+  public function view()
   {
-      $user = User::find($id);
-      $posts = Post::where('group_id', '3')->orderBy('created_at', 'desc')->get();
+      // $user = User::find($id);
+      $posts = Post::where('group_id', '3')->orderBy('created_at', 'desc')->visibles()->get();
       return view('groupviews.establecimientos', compact('user','posts'));
   }
 
@@ -23,8 +23,8 @@ class EstablecimientosController extends Controller
         'post_text' => $request['post_text'],
         'user_id' => Auth::user()->id,
         'group_id' => $request['group_id'],
-        'visitor' => $request->ip,
     ]);
+
     $posts = Post::where('group_id', '3')->orderBy('created_at', 'desc')->get();
 
     if ($request->postfile) {
@@ -41,13 +41,10 @@ class EstablecimientosController extends Controller
         $post->imagespost()->save($imagespost);
         $post->imagespost($postfile,$request->post_id);
       }
-
-
-
-
-  }
+    }
 
     return view('groupviews.establecimientos', compact('posts'));
+
   }
 
   public function AllPosts(Auth $user, Post $post)

@@ -5,7 +5,7 @@
 @section('content')
   <div class="container">
   <div class="row">
-    @include('partials.barraizquierda')
+    @include('partials.leftnavbar')
 
     <div class="col-sm-7 margin-btn-60 fixed-top">
       <div class="row">
@@ -17,7 +17,7 @@
               <p class="font-size-medium"><img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar"> ¿Listo para Kidyar {{\Auth::user()->name}}?</p>
 
 
-               <form class="" method="post" action="/colonias/{{\Auth::user()->id}}" enctype="multipart/form-data">
+               <form class="" method="post" action="/colonias" enctype="multipart/form-data">
                  {{ csrf_field() }}
                  <textarea name="post_text" class="postarea margin-btn-10" placeholder="¿Listo para Kidyarte?"> </textarea>
                    <input id="postfile" class="inputfile" type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" data-multiple-caption="{count} archivos seleccionados" multiple="">

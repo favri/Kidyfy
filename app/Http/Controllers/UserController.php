@@ -16,7 +16,7 @@ class UserController extends Controller
   {
       $user = User::find($id);
       $doctors = DB::table('doctors');
-      $posts = Post::where("user_id", "=", $user->id)->visibles()->get();
+      $posts = Post::where("user_id", "=", $user->id)->orderBy('created_at', 'desc')->visibles()->get();
       return view('userviews.userprofile', compact('user', 'posts','doctors'));
   }
 

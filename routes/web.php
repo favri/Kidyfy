@@ -29,7 +29,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/home/{id}' , 'HomeController@view');
+// Route::get('/home/{id}' , 'HomeController@view');
+
+Route::get('/medicos', 'MedicosController@view');
+Route::get('/establecimientos', 'EstablecimientosController@view');
+Route::get('/indumentaria', 'IndumentariaController@view');
+Route::get('/colegios', 'ColegiosController@view');
+Route::get('/colonias', 'ColoniasController@view');
+
+Route::post('/colegios','ColegiosController@store');
+Route::post('/medicos','MedicosController@store');
+Route::post('/establecimientos','EstablecimientosController@store');
+Route::post('/colonias','ColoniasController@store');
+Route::post('/indumentaria','IndumentariaController@store');
 
 Route::post('/home','PostsController@store');
 Route::get('/posteo/{id}/editar','PostsController@editar');
@@ -43,27 +55,13 @@ Route::match(['post', 'patch'],'registro/{id}','RegisterController@actualizar');
 // Route::get('register/{id}/edit','Auth\RegisterController@edit');
 // Route::patch('register/{id}','Auth\RegisterController@update');
 
-Route::post('/colegios','ColegiosController@store');
-Route::post('/medicos','MedicosController@store');
-Route::post('/establecimientos','EstablecimientosController@store');
-Route::post('/colonias','ColoniasController@store');
-Route::post('/indumentaria','IndumentariaController@store');
-
-
-
-
 Route::get('faq', 'FaqController@faqs');
-
 Route::get('legal', 'LegalController@legals');
 
-Route::get('/grupo/usuario/{id}', 'GrupoController@view');
-Route::get('/doctores/usuario/{id}', 'DoctorController@view');
+Route::get('/grupos', 'GrupoController@view');
+Route::get('/doctores', 'DoctorController@view');
 
-Route::get('medicos/usuario/{id}', 'MedicosController@view');
-Route::get('establecimientos/usuario/{id}', 'EstablecimientosController@view');
-Route::get('indumentaria/usuario/{id}', 'IndumentariaController@view');
-Route::get('colegios/usuario/{id}', 'ColegiosController@view');
-Route::get('colonias/usuario/{id}', 'ColoniasController@view');
+
 
 Route::get('/amistades', 'FriendshipController@getIndex');
 

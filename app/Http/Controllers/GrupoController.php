@@ -11,9 +11,9 @@ use App\Post;
 class GrupoController extends Controller
 {
 
-  public function view($id)
+  public function view()
   {
-      $user = User::find($id);
+      // $user = User::find($id);
       $posts = Post::orderBy('created_at', 'desc')->get();
       return view('groupviews.grupo', compact('user','posts'));
   }

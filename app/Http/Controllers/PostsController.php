@@ -31,7 +31,7 @@ class PostsController extends Controller
         'group_id' => $request['group_id'],
         'visitor' => $request->ip,
     ]);
-    $posts = Post::orderBy('created_at', 'desc')->get();
+    $posts = Post::orderBy('created_at', 'desc')->visibles()->get();
 
     if ($request->postfile) {
       //guardo el archivo
@@ -78,7 +78,7 @@ class PostsController extends Controller
       $post->visible = 0;
       $post->save();
 
-      return redirect('home');
+      return redirect ('home');
     }
 
     public function imagespost(Request $request, $id)

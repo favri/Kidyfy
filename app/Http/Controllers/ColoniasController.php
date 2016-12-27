@@ -10,10 +10,10 @@ use Auth;
 
 class ColoniasController extends Controller
 {
-  public function view($id)
+  public function view()
   {
-      $user = User::find($id);
-      $posts = Post::where('group_id', '6')->orderBy('created_at', 'desc')->get();
+      // $user = User::find($id);
+      $posts = Post::where('group_id', '6')->orderBy('created_at', 'desc')->visibles()->get();
       return view('groupviews.colonias', compact('user','posts'));
   }
   public function store(Request $request)

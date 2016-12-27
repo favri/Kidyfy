@@ -15,9 +15,9 @@ use App\UserSecondarie;
 
 class DoctorController extends Controller
 {
-  public function view($id)
+  public function view()
   {
-      $user = User::find($id);
+      // $user = User::find($id);
       $doctors = DB::table('doctors')->get();
       return view('doctorviews.doctorlists', compact('user','doctors'));
   }

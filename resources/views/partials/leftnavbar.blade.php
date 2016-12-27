@@ -9,14 +9,13 @@
     </p>
   </div>
   <div class="mgtop20 ">
-      <h4><a href="/posteo/{{Auth::user()->id }}/1">Grupos</a></h4>
+      <h4><a href="/grupos">Grupos</a></h4>
       <div class="row margin-btn-10 grouplist">
         <div class="col-sm-1 grouplist">
           <span class="icon"><i class="fa fa-hospital-o"></i></span>
         </div>
         <div class="col-sm-10 mgtop5 grouplist">
-          <!-- <label for="establecimientos"><a href="establecimientos/usuario/{{Auth::user()->id }}"> Establecimientos Médicos</a></label> -->
-          <label for="establecimientos"><a href="/posteo/{{Auth::user()->id }}/3"> Establecimientos Médicos</a></label>
+          <label for="establecimientos"><a href="/establecimientos"> Establecimientos Médicos</a></label>
         </div>
       </div>
       <div class="row margin-btn-10 grouplist">
@@ -24,7 +23,7 @@
           <span class="icon"><i class="fa fa-stethoscope"></i></span>
         </div>
         <div class="col-sm-10 mgtop5 grouplist">
-          <label for="medicos"><a href="/posteo/{{Auth::user()->id }}/2"> Médicos</a></label>
+          <label for="medicos"><a href="/medicos"> Médicos</a></label>
         </div>
       </div>
       <div class="row margin-btn-10 grouplist">
@@ -32,7 +31,7 @@
           <span class="icon"><i class="fa fa-briefcase"></i></span>
         </div>
         <div class="col-sm-10 mgtop4 grouplist">
-          <label for="indumentaria"><a href="/posteo/{{Auth::user()->id }}/4"> Indumentaria</a></label>
+          <label for="indumentaria"><a href="/indumentaria"> Indumentaria</a></label>
         </div>
       </div>
       <div class="row margin-btn-10 grouplist">
@@ -40,7 +39,7 @@
           <span class="icon"><i class="fa fa-graduation-cap"></i></span>
         </div>
         <div class="col-sm-10 mgtop4 grouplist">
-          <label for="Colegios"><a href="/posteo/{{Auth::user()->id }}/5"> Colegios</a></label>
+          <label for="Colegios"><a href="/colegios"> Colegios</a></label>
         </div>
       </div>
       <div class="row margin-btn-10 grouplist">
@@ -48,7 +47,7 @@
           <span class="icon"><i class="fa fa-life-ring"></i></span>
         </div>
         <div class="col-sm-10 mgtop5 grouplist">
-          <label for="colonias"><a href="/posteo/{{Auth::user()->id }}/6"> Colonias</a></label>
+          <label for="colonias"><a href="/colonias"> Colonias</a></label>
         </div>
       </div>
   </div>

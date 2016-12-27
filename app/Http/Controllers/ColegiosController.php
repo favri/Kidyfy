@@ -10,10 +10,10 @@ use Auth;
 
 class ColegiosController extends Controller
 {
-  public function view($id)
+  public function view()
   {
-      $user = User::find($id);
-      $posts = Post::where('group_id', '5')->orderBy('created_at', 'desc')->get();
+      // $user = User::find($id);
+      $posts = Post::where('group_id', '5')->orderBy('created_at', 'desc')->visibles()->get();
       return view('groupviews.colegio', compact('user','posts'));
   }
 

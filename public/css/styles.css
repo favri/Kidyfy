@@ -543,3 +543,9 @@ textarea{
   border-radius: 5px;*/
 	outline: -webkit-focus-ring-color auto 5px;
 }
+
+.btn-erase{
+  margin-top: -60px;
+  margin-right: -20px;
+  border: none;
+}

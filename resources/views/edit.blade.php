@@ -6,7 +6,7 @@
 @section('content')
 <div class="container">
 <div class="row">
-  @include('partials.barraizquierda')
+  @include('partials.leftnavbar')
   <div id="ccol" class="col-sm-7 fixed-top">
 
     <!-- <div class="row">
@@ -46,9 +46,9 @@
 
           <form class="" method="post" action="/posteo/{{$post->id }}/borrar" enctype="multipart/form-data">
             {{ csrf_field() }}
-            <input id="postfile" class="inputfile" type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" data-multiple-caption="{count} archivos seleccionados" multiple="">
+            {{-- <input id="postfile" class="inputfile" type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" data-multiple-caption="{count} archivos seleccionados" multiple="">
             <label for="postfile"><span>Subir Foto</span></label>
-            <input type="number" name="group_id" value="1" hidden>
+            <input type="number" name="group_id" value="1" hidden> --}}
             <button type="submit" class="btn btn-primary pull-right">Borrar</button>
           </form>
 
