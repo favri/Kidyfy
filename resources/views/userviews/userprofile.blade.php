@@ -14,7 +14,7 @@
       @if (is_object($user->image))
         <img src="/img/{{$user->image->src}}" class="img-square brd-phto " height="150" width="150" alt="Avatar">
       @endif
-        <p class="font-size-large"><a href="/{{$user->id }}">{{$user->name}}</a></p>
+        <p class="font-size-large"><a href="/usuario/{{$user->id }}">{{$user->name}}</a></p>
       </div>
     <div class="mgtop20">
         <div class="row margin-btn-10">
@@ -58,7 +58,7 @@
             <label for="hijos">{{$user->UserSecondaries->hijos}}</label>
           </div>
         </div>
-        <h4><a href="/grupo/{{Auth::user()->id }}">Grupos Favoritos:</a></h4>
+        <h4><a href="/grupo/usuario/{{Auth::user()->id }}">Grupos Favoritos:</a></h4>
         <div class="row margin-btn-10">
           <div class="col-sm-2">
             <span class="icon"><i class="{{$user->UserSecondaries->group->icon}}"></i></span>
@@ -83,7 +83,7 @@
             <span class="icon"><i class="fa fa-heartbeat"></i></span>
           </div>
           <div class="col-sm-10">
-            <label for="doctor"><a href="/doctores/{{$user->id}}">{{$user->UserSecondaries->doctor->name}}</a></label>
+            <label for="doctor"><a href="/doctores/usuario/{{$user->id}}">{{$user->UserSecondaries->doctor->name}}</a></label>
           </div>
         </div>
     </div>
@@ -102,7 +102,7 @@
             <div class="row">
               <div class="col-sm-12">
                 <p class="font-size-medium">
-                  <a href="/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
+                  <a href="/usuario/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
                 </p>
               </div>
             </div>
@@ -119,7 +119,7 @@
             <div class="row">
               <div class="col-sm-12">
                 <p class="font-size-medium">
-                  <a href="/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
+                  <a href="/usuario/{{$post->user->id}}">{{ $post->user->name }}</a> el {{$post->created_at}}
                 </p>
               </div>
             </div>
