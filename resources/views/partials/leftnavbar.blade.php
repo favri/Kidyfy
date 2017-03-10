@@ -52,7 +52,7 @@
       </div>
   </div>
   <div class="mgtop20">
-    <h4><a href="/doctores/usuario/{{Auth::user()->id}}">Doctores</a></h4>
+    <h4><a href="/doctores">Doctores</a></h4>
       <div class="row margin-btn-10 grouplist">
         <div class="col-sm-1 grouplist">
           <span class="icon"><i class="fa fa-user-md"></i></span>
