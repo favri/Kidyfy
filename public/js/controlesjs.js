@@ -174,10 +174,14 @@ $(document).ready(function () {
   $("#user-pill").click(function(){
     $("#user-form").show();
     $("#doctor-form").hide();
+    $("#user-pill").addClass("active");
+    $("#doctor-pill").removeClass("active");
 });
   $("#doctor-pill").click(function(){
     $("#user-form").hide();
     $("#doctor-form").show();
+    $("#user-pill").removeClass("active");
+    $("#doctor-pill").addClass("active");
 });
 
   $(".menem").justifiedGallery({

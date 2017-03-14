@@ -7,7 +7,7 @@
           <section >
 
             <ul class="nav nav-pills">
-              <li id="user-pill">
+              <li id="user-pill" class="active">
                 <a href="#">Usuario</a>
               </li>
               <li id="doctor-pill" >
