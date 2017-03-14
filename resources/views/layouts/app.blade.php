@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="AngApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -103,11 +103,13 @@
 
   <!-- Scripts -->
   <script src="/js/app.js"></script>
-  <script src="/js/controlesjs.js"></script>
-  <script src="/js/faq.js"></script>
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/ang.js"></script>
+    <script src="/js/faq.js"></script>
   <script src="/js/main.6054e11b.js"></script>
   <script src="/js/jquery.custom-file-input.js"></script>
-  <script src="/js/jquery-v3.1.0.min.js"></script>
+  <script src="/js/jquery-3.1.0.min.js"></script>
+  <script src="/js/controlesjs.js"></script>
 
   <script src="/js/lightbox-plus-jquery.js"></script>
   <script>

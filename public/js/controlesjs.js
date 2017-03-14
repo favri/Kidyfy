@@ -171,6 +171,15 @@
 //   }
 //  };
 $(document).ready(function () {
+  $("#user-pill").click(function(){
+    $("#user-form").show();
+    $("#doctor-form").hide();
+});
+  $("#doctor-pill").click(function(){
+    $("#user-form").hide();
+    $("#doctor-form").show();
+});
+
   $(".menem").justifiedGallery({
     rowHeight : 150,
     lastRow : 'justify',
