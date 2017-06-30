@@ -15,16 +15,14 @@
         <div class="col-sm-10 col-sm-offset-1 postbox  bkg-white brd-top">
           <p class="font-size-medium"><img src="/img/{{\Auth::user()->image->src}}" class="img-square margin-btn-10" height="30" width="30" alt="Avatar"> ¿Listo para Kidyar {{\Auth::user()->name}}?</p>
 
-
            <form class="" method="post" action="/home" enctype="multipart/form-data">
              {{ csrf_field() }}
              <textarea name="post_text" class="postarea margin-btn-10" placeholder="¿Listo para Kidyarte?"> </textarea>
              <input id="postfile" class="inputfile" type="file" name="postfile[]" size="2mb" value="" style="display:inline-block" data-multiple-caption="{count} archivos seleccionados" multiple="">
-           <label for="postfile"><span>Subir Foto</span></label>
+             <label for="postfile"><span>Subir Foto</span></label>
              <input type="number" name="group_id" value="1" hidden>
              <button type="submit" class="btn btn-primary pull-right">Postear</button>
            </form>
-
         </div>
     </div>
 

@@ -38,10 +38,6 @@ class UserSecondarie extends Model
     return $this->belongsTo('App\User');
   }
 
-  public function post() {
-    return $this->hasMany('Post' , 'user_id');
-  }
-
   public function group()
   {
     return $this->belongsTo('App\Group') ;

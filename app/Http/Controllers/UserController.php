@@ -9,6 +9,7 @@ use Auth;
 use App\User;
 use App\Post;
 use App\Doctor;
+use App\UserSecondarie;
 
 class UserController extends Controller
 {
