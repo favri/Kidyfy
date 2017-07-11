@@ -46,22 +46,25 @@ Route::post('/indumentaria','IndumentariaController@store');
 Route::post('/home','PostsController@store');
 Route::get('/posteo/{id}/editar','PostsController@editar');
 Route::post('/posteo/{id}/borrar','PostsController@destroy');
-Route::get('/posteo/{id}/{grupo}','PostsController@editarporgrupo');
+Route::get('/posteo/{grupo}','PostsController@editarporgrupo');
 
-
+Route::get('/usuario/{id}','UserController@view');
 
 Route::get('registro/{id}/editar','RegisterController@editar');
 Route::match(['post', 'patch'],'registro/{id}','RegisterController@actualizar');
 // Route::get('register/{id}/edit','Auth\RegisterController@edit');
 // Route::patch('register/{id}','Auth\RegisterController@update');
 
+Route::post('/usuario2/{id}/store','UserSecondariesController@store');
+Route::get('/usuario2/{id}/editar','UserSecondariesController@editar');
+Route::match(['post', 'patch'],'/usuario2/{id}','UserSecondariesController@actualizar');
+
+
 Route::get('faq', 'FaqController@faqs');
 Route::get('legal', 'LegalController@legals');
 
 Route::get('/grupos', 'GrupoController@view');
 Route::get('/doctores', 'DoctorController@view');
-
-
 
 Route::get('/amistades', 'FriendshipController@getIndex');
 

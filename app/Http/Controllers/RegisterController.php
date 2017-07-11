@@ -16,7 +16,6 @@ class RegisterController extends Controller
       return view('auth.registeredit', compact('user'));
     }
 
-
     public function actualizar (Request $request)
     {
         $user = User::find($request->id);
@@ -50,6 +49,8 @@ class RegisterController extends Controller
           'genero'=>$request['genero'],
       ]);
       //$user->update($request->all());
+      // return redirect('registeredit2/{$user->id}/store');
+
       return redirect('home');
     }
 

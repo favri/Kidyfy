@@ -45,7 +45,9 @@
           <span class="icon"><i class="fa fa-child"></i></span>
         </div>
         <div class="col-sm-10">
-          <label for="hijos">{{$user->UserSecondaries->hijos}}</label>
+          @if (is_object($user->UserSecondaries->hijos))
+             <label for="hijos">{{$user->UserSecondaries->hijos}}</label>
+          @endif
         </div>
       </div>
       <h4>Grupos Favoritos</h4>
@@ -54,7 +56,9 @@
           <span class="icon"><i class="{{$user->UserSecondaries->group->icon}}"></i></span>
         </div>
         <div class="col-sm-10">
-          <label for="grupo_favorito" class="capitalize"><a href="/{{$user->UserSecondaries->group->group_name}}">{{$user->UserSecondaries->group->group_name}}</a></label>
+          @if (is_object($user->UserSecondaries->group->group_name))
+            <label for="grupo_favorito" class="capitalize"><a href="/{{$user->UserSecondaries->group->group_name}}">{{$user->UserSecondaries->group->group_name}}</a></label>
+          @endif
         </div>
       </div>
 

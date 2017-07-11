@@ -9,12 +9,14 @@ use Auth;
 
 class PostsController extends Controller
 {
-  public function editarporgrupo ($id, $grupo){
-    $posts =  Post::where([
-      ["user_id", "=", $id],
-      ['group_id', '=', $grupo],
-      ])->visibles()->get();
-    return view('edit' , compact('posts'));
+  public function editarporgrupo ($grupo){
+    // $posts =  Post::where([
+    //   ["user_id", "=", $id],
+    //   ['group_id', '=', $grupo],
+    //   ])->visibles()->get();
+    $posts =  Post::where('group_id', '=', $grupo)
+      ->orderBy('created_at', 'desc')->visibles()->get();
+    return view('home' , compact('posts'));
   }
 
   public function editar ($id){

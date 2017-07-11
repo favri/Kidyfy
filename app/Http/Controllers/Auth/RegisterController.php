@@ -93,6 +93,7 @@ class RegisterController extends Controller
         $user = \Auth::user()->update($request->all());
         $user->image($request->input('file'),$request->user_id);
         return redirect('home');
+        // return redirect('registeredit2/{$user->id}/store');
     }
 
 }
